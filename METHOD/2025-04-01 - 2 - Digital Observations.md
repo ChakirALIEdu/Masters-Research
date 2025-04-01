@@ -14,7 +14,7 @@ But why Neocities? Why the interest in it?
 In recent months, due to the advent of fascism in the United States, and more recent issues regarding privacy online, people have decided to move more self-controlled spaces.
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/neocities.png" alt="Neocities" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/neocities.png" alt="Screenshot of a Tumblr post discussing the migration to Neocities as a response to corporate control" width="200"></td>
 </tr>
 </table>
 
@@ -33,16 +33,16 @@ ___
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/1.png" alt="DigitalFootprint1" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/2.png" alt="DigitalFootprint2" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/3.png" alt="DigitalFootprint3" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/1.png" alt="Kry.pt homepage featuring a minimalist design with cryptic aesthetics" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/2.png" alt="Kry.pt manifesto page showing retro-styled text layout" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/3.png" alt="Kry.pt's top 10 cute boys list with playful formatting" width="200"></td>
 </tr>
 </table>
 </div>
 This website was really impressive. People create their own portfolio websites this way, or quirky sites to show off their coding skills. This one was particularly impressive. Looking into it, and clicking on their manifesto link, led me straight towards a list of top 10 cute boys, formatted in kitschy old style. I thought it was funny. The list ended with me being the number 1 cutest boy. I'm most delighted.
 
 Looking into their code was really fun. For example, I found this.
-![img](images/2025-04-01/website-screenshots/6.png)
+![img](images/2025-04-01/website-screenshots/6.png "CSS code comment showing a humorous prayer about viewport units")
 
 Their CSS reads this comment:
 
@@ -71,8 +71,8 @@ Comments in code hold a lot of fun jokes like that. I had almost forgotten about
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/7.png" alt="DigitalFootprint7" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/8.png" alt="DigitalFootprint8" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/7.png" alt="Code comment discussing TTF font implementation trade-offs" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/8.png" alt="Developer note about CSS inset shorthand bug" width="200"></td>
 </tr>
 </table>
 </div>
@@ -87,8 +87,8 @@ Comments like these are really fun to discover. They really give an insight into
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/9.png" alt="DigitalFootprint9" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/10.png" alt="DigitalFootprint10" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/9.png" alt="Dokode.moe homepage with distinctive anime-inspired design" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/10.png" alt="HTML code disclaimer warning against copying the site's code" width="200"></td>
 </tr>
 </table>
 </div>
@@ -98,9 +98,9 @@ People leave disclaimers at the start of their HTML codes, warning people not to
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/11.png" alt="DigitalFootprint11" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/12.png" alt="DigitalFootprint12" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/13.PNG" alt="DigitalFootprint13" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/11.png" alt="Velvet Blue's homepage with retro web aesthetics" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/12.png" alt="CSS file with hidden music recommendation" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/13.PNG" alt="Personal touch in code comments recommending Scandal's song" width="200"></td>
 </tr>
 </table>
 </div>
@@ -115,7 +115,7 @@ Parts of people will shine through, always.
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/14.png" alt="DigitalFootprint14" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/14.png" alt="Scaruffi.com's vintage webpage layout showing music reviews" width="200"></td>
 </tr>
 </table>
 </div>
@@ -125,9 +125,9 @@ This is an old discontinued website called Scaruffi.com. It mainly prides itself
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/15.png" alt="DigitalFootprint15" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/16.png" alt="DigitalFootprint16" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/17.png" alt="DigitalFootprint17" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/15.png" alt="Old forum homepage from 2017 showing last active discussions" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/16.png" alt="Forum thread showing normal user activity from 2017" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/17.png" alt="Same forum showing bot spam activity from 2022" width="200"></td>
 </tr>
 </table>
 </div>
@@ -138,7 +138,7 @@ This is the [first old forum](https://handgunforum.proboards.com/thread/3858/wel
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/18.png" alt="DigitalFootprint18" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/18.png" alt="Broken Tripod website showing missing images and deteriorated HTML" width="200"></td>
 </tr>
 </table>
 </div>
@@ -148,9 +148,9 @@ A bit more discontinued than the rest, this website is an artefact of perhaps br
 <div align="center">
 <table>
 <tr>
-<td><img src="images/2025-04-01/website-screenshots/instagram.png" alt="Instagram" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/tumblr-2.png" alt="Tumblr" width="200"></td>
-<td><img src="images/2025-04-01/website-screenshots/tumblr.png" alt="Tumblr" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/instagram.png" alt="Instagram's console warning against potential scams in French" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/tumblr-2.png" alt="Tumblr's friendly developer console message with ASCII art" width="200"></td>
+<td><img src="images/2025-04-01/website-screenshots/tumblr.png" alt="Tumblr's console featuring Steve Harvey and Guy Fieri ASCII art" width="200"></td>
 </tr>
 </table>
 </div>
@@ -159,9 +159,9 @@ Some websites hold hidden messages in their consoles. Instagram shares a warning
 
 >  Stop ! 
 
-> Il s’agit d’une fonctionnalité de navigateur conçue pour les développeurs. Si quelqu’un vous a invité(e) à copier-coller quelque chose ici pour activer une fonctionnalité Instagram ou soi-disant pirater le compte d’un tiers, sachez que c’est une arnaque permettant à cette personne d’accéder à votre compte Instagram. 
+> Il s'agit d'une fonctionnalité de navigateur conçue pour les développeurs. Si quelqu'un vous a invité(e) à copier-coller quelque chose ici pour activer une fonctionnalité Instagram ou soi-disant pirater le compte d'un tiers, sachez que c'est une arnaque permettant à cette personne d'accéder à votre compte Instagram. 
 
-> Voir https://www.facebook.com/selfxss pour plus d’informations. 
+> Voir https://www.facebook.com/selfxss pour plus d'informations. 
 
 They laid out clear warning for users to not fall for scams online. Tumblr, on the other hand, holds no fear for its own userbase, and in fact shows interest in them. If they opened the console, they must be qualified coders. (...) (And they top it up with some ASCII art of potato Steve Harvey, and Guy Fieri in his iconic pose)
 
