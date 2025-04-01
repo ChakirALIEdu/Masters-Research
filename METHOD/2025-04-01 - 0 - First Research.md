@@ -4,7 +4,7 @@
 
 It pertains to researching aspects related to my thesis by concentrating my observation on "forgotten" spaces (physically or digitally.)
 
-Wendy Chun talks about the visible invisible, and the invisible visible. This research looks into a more literal interpretation of what she talked about in her book [Insert Titlte of Book].
+Wendy Chun talks about the visible invisible, and the invisible visible. This research looks into a more literal interpretation of what she talked about in her book *"Programmed Visions: Software and Memory".*
 
 
 > Exercice #7: Coins et Recoins 
