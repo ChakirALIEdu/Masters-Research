@@ -15,3 +15,17 @@ Wendy Chun talks about the visible invisible, and the invisible visible. This re
 
 This was an exercise assigned by Joël Vacheron, yesterday. I applied this research on my thesis research, in two parts. First, a physical observation where I explore the world's hidden corners, especially in Geneva. Then, a digital obsveration, where I look into the web's most distanced parts.
 
+
+
+## TL;DR, for those that don't want to read my research of the day:
+
+The key insights are that there is an inverse relationship between comfort and privacy/control:
+
+
+> High comfort → Lower privacy needs (Anière's open community)
+
+>High control → Lower comfort but more authentic expression (Neocities sites)
+
+> Corporate comfort → Loss of control (Social media platforms)
+
+ The more comfortable and convenient a space becomes (physical or digital), the more it tends to erode privacy and individual control.
