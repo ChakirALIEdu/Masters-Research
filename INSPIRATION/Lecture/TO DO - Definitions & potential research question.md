@@ -12,14 +12,22 @@ User Interface
 
 Dead internet
 
-[Insert more]
+[Insert more terms I used throughout the Git]
 
 
 # Potential research questions
 
-1.
+1. ### "Your favourite designers design discomfort"
 
-2.
+> What are the methods used to engineer discomfort in users in order to control their choices? What is the future of privacy?
 
-3.
+*Convenience in the face of discomfort is a trap; someone designed it that way."*
+
+2. 
+### Other question
+
+
+3. 
+### Other question
+
 

@@ -4,6 +4,16 @@
 
 On monday, I went to visit my mom. She recently got knee surgery. She's fine, but she got moved to Anière for her reeducation. It's a ways away.
 
+<div align="center">
+<table>
+<tr>
+<td><img src="images/2025-04-01/notebook/notebook1.jpg" alt="Hospital notes" width="200"></td>
+<td><img src="images/2025-04-01/notebook/notebook3.jpg" alt="I was scared for my life" width="200"></td>
+<td><img src="images/2025-04-01/notebook/notebook2.jpg" alt="A little bit of notes on my fateful encounter" width="200"></td>
+</tr>
+</table>
+</div>
+
 
 Here are my notes on this experience, in the form of messsages I sent to friends after the fact:
 
