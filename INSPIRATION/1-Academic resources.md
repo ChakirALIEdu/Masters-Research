@@ -17,16 +17,61 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 ### By Hakim Bey
 - *T.A.Z.: The Temporary Autonomous Zone*
 
-## Website Refs
+
+## ACADEMIC REFS
+
+
+
+- **The Clickwrap: A Political Economic Mechanism for Manufacturing Consent on Social Media**  
+  *Jonathan A. Obar & Anne Oeldorf-Hirsch* (2018)  
+  Published in **Social Media + Society**  
+
+
+- **“The Apple Way”: Foucault, Design, Consumerism, and the Shaping of Apple Subjects**  
+  *Melinda Gaughwin* (2022)  
+  Published in **Design and Culture**  
+
+
+- **Rich User Experience, UX and Desktopization of War**  
+  *Olia Lialina* (2015)  
+  Presented at **Interface Critique Conference**  
+
+
+ ## DOCUMENTARIES REF
+
+
+- **Terms and Conditions May Apply**  
+  [Watch on YouTube](https://www.youtube.com/watch?v=uiyEGh4iYkk)
+
+
+- **Do Not Track** (Interactive Web Doc)  
+  [Visit website](http://donottrack-doc.com/en/episodes/)
+
+- **Shoshana Zuboff – Surveillance Capitalism**  
+  [Watch this talk](https://www.youtube.com/watch?v=hIXhnWUmMvw)
+
+- **Nerdwriter – How Social Media Makes Us Unsocial**    
+  [Watch on YouTube](https://www.youtube.com/watch?v=d5GecYjy9-Q)
+
+- **Everything is a Remix – Kirby Ferguson**   
+  [Watch here](https://www.youtube.com/watch?v=nJPERZDfyWc)
+
+- **Inhuman Kind (Arte, 2023)**  
+
+
+## WEBSITE REFS
 
 ### Neocities websites
 
 [Kry.pt](https://kry.pt/)
+
 [Dokode.moe](https://dokode.moe/indexv3)
+
 [Velvet Blue](https://velvetblue.neocities.org/)
+
 [Scaruffi](https://scaruffi.com/)
 
-## Art pieces (music, installations, etc.)-
+## ART AND MUSIC REFS
 
 ["Sons of Liberty", by Frank Turner.](https://www.youtube.com/watch?v=kk_6kwZbNJs) 
 
