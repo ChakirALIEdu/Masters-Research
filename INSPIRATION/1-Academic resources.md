@@ -14,6 +14,8 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 
 - *The Interface Effect*
 
+### By Hakim Bey
+- *T.A.Z.: The Temporary Autonomous Zone*
 
 ## Website Refs
 
