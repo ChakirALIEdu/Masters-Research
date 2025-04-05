@@ -21,7 +21,6 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 ## ACADEMIC REFS
 
 
-
 - **The Clickwrap: A Political Economic Mechanism for Manufacturing Consent on Social Media**  
   *Jonathan A. Obar & Anne Oeldorf-Hirsch* (2018)  
   Published in **Social Media + Society**  
@@ -36,6 +35,12 @@ Here are a few academic resources that are worth looking into an dissecting, fro
   *Olia Lialina* (2015)  
   Presented at **Interface Critique Conference**  
 
+- **The Age of Surveillance Capitalism**, Shoshana Zuboff (2019), Published by PublicAffairs
+
+- **Intimations of Everyday Life: Ubiquitous Computing and the City  
+Anne Galloway (2004),** Published in Cultural Studies, Vol. 18, Issue 2-3
+
+- **New Dark Age: Technology and the End of the Future**, James Bridle (2018), Published by Verso Books
 
  ## DOCUMENTARIES REF
 
