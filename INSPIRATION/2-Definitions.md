@@ -1,7 +1,8 @@
 # List of Terms/Topics 
 
 ### Idiosyncracies
-"a peculiarity of constitution or temperament : an individualizing characteristic or quality" [Source](https://www.merriam-webster.com/dictionary/idiosyncrasy)
+"a peculiarity of constitution or temperament : an individualizing characteristic or quality" [Source from Merriam-Webster](https://www.merriam-webster.com/dictionary/idiosyncrasy)
+
 Joël Vacheron says: 
 > "Idiosyncracies [...] We talk about the first programs. They were always marked by the singularity or the identity of programmers. Something always linked of the identity of those that produce it- Idiosyncracies."
 
@@ -12,7 +13,7 @@ What IS Design?
 What IS choice, to begin with?
 
 ### End-to-End Encryption
-"End-to-end encryption (E2EE) is a secure communication process that encrypts data before transferring it to another endpoint. Data stays encrypted in transit and is decrypted on the recipient’s device. Messaging apps, SMS and other communications services rely on E2EE to protect messages from unauthorized access." [Source)(https://www.ibm.com/think/topics/end-to-end-encryption)
+"End-to-end encryption (E2EE) is a secure communication process that encrypts data before transferring it to another endpoint. Data stays encrypted in transit and is decrypted on the recipient’s device. Messaging apps, SMS and other communications services rely on E2EE to protect messages from unauthorized access." [Source from IBM](https://www.ibm.com/think/topics/end-to-end-encryption)
 
 ### Soft Coercion
 A form of control, which subtly influences people's behavior through convenience. (or social norms, or interface design, anything without overt force really..) In UX, it often appears as “defaults,” hidden options, opt-in opt-outc or nudges disguised as helpful features. (Turn on your location or smth)
