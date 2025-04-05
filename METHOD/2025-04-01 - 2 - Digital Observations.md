@@ -1,5 +1,7 @@
 # Research notes 3
 
+ 	┐(￣∀￣)┌
+
 ## Digital Observations: Travel across the web
 
 If I can observe the world physically, then what about digitally? 

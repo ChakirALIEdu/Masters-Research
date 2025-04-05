@@ -1,5 +1,7 @@
 # Research notes 1
 
+    (づ◡﹏◡)づ
+
 ## Coins et Recoins: new method of field observation
 
 It pertains to researching aspects related to my thesis by concentrating my observation on "forgotten" spaces (physically or digitally.)

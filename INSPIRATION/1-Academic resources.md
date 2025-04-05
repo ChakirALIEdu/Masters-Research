@@ -1,5 +1,10 @@
 # Academic Resources
 
+
+    _:(´ཀ`」 ∠):
+
+---
+
 Here are a few academic resources that are worth looking into an dissecting, from books, articles, music, research, websites I've visited, art pieces, etc...
 
 ## BOOKS REF: 

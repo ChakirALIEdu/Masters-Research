@@ -1,5 +1,8 @@
 # Research notes 2
  
+ 	(￣▽￣)ノ
+
+
 ## Physical Observations: Travel to Anière and its community
 
 On monday, I went to visit my mom. She recently got knee surgery. She's fine, but she got moved to Anière for her reeducation. It's a ways away.
@@ -21,6 +24,18 @@ Here are my notes on this experience, in the form of messsages I sent to friends
 
 Google maps had given me the wrong path. I confidently walked into this private residential area on accident, looking for my mom. A terrifying experience, and I'm actually surprised Google Maps brought me to a space that was private and wanted me to hop the fence to get to a hospital. Funnily enough, google maps has no care for people's private property.
 
+
+
+<div align="center">
+<table>
+<tr>
+<td><img src="images/2025-04-05/aniere1.png" alt="path given by google maps" width="400"></td>
+<td><img src="images/2025-04-05/aniere3.jpg" alt="aniere is really pretty" width="300"></td>
+<td><img src="images/2025-04-05/aniere2.png" alt="the actual path i needed to take to avoid walking into someone's back yard" width="400"></td>
+
+</tr>
+</table>
+</div>
 Come to think of it, isn't it weird everyone's homes is visible from our computers? That used to not be the case. Now, I can see my building's park, my window, and I can walk into a rich person's villa and be guided directly there.
 
 
