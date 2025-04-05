@@ -41,20 +41,20 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 
 
 - **Terms and Conditions May Apply**  
-  [Watch on YouTube](https://www.youtube.com/watch?v=uiyEGh4iYkk)
+  [on YouTube](https://youtu.be/hRJEYmodC08?si=LH6JcMA49Jw_nki7)
 
 
 - **Do Not Track** (Interactive Web Doc)  
   [Visit website](http://donottrack-doc.com/en/episodes/)
 
 - **Shoshana Zuboff – Surveillance Capitalism**  
-  [Watch this talk](https://www.youtube.com/watch?v=hIXhnWUmMvw)
+  [on Youtbe](https://www.youtube.com/watch?v=hIXhnWUmMvw)
 
 - **Nerdwriter – How Social Media Makes Us Unsocial**    
-  [Watch on YouTube](https://www.youtube.com/watch?v=d5GecYjy9-Q)
+  [on YouTube](https://www.youtube.com/watch?v=d5GecYjy9-Q)
 
 - **Everything is a Remix – Kirby Ferguson**   
-  [Watch here](https://www.youtube.com/watch?v=nJPERZDfyWc)
+  [on Youtube](https://www.youtube.com/watch?v=nJPERZDfyWc)
 
 - **Inhuman Kind (Arte, 2023)**  
 
