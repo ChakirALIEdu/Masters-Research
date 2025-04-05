@@ -18,6 +18,16 @@ A form of control, which subtly influences people's behavior through convenience
 ### User Interface
 UI, UX...What are those?
 
+--->
+
+## User Interface (UI)
+
+The **User Interface (UI)** encompasses all the elements that allow users to interact with a device or application. This includes screens, buttons, icons, and navigation menus. Essentially, it's the point of human-computer interaction and communication.  [oai_citation_attribution:0‡Informa TechTarget](https://www.techtarget.com/searchapparchitecture/definition/user-interface-UI?utm_source=chatgpt.com)
+
+## User Experience (UX)
+
+**User Experience (UX)** refers to the overall experience a user has when interacting with a product or service, particularly in terms of how pleasant or satisfying it is to use. This includes aspects like usability, design, performance, and how the user feels during the interaction.  [oai_citation_attribution:1‡Coursera](https://www.coursera.org/articles/ui-vs-ux-design?utm_source=chatgpt.com)
+
 ### Dead internet
 Not to be confused with the quirky internet conspiracy theory. When people I quote say "the internet is dead", they mean that they have no control like they did in the past. The joy, freedom, interesting design and openness seems to have disappeared in the eyes of internauts.
 
