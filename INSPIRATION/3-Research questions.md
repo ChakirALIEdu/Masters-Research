@@ -17,4 +17,4 @@ Look into it through game design, user interfaces...? I feel like that statement
 
 > What happens to agency when privacy (or lack thereof) is not a choice, but a precondition of access?
 
-> ""Exposure and visibility thus become **consent** in the eyes of others." You are seen, therefore you are accessible, therefore you are my possession if I so choose.
+"Exposure and visibility thus become **consent** in the eyes of others." You are seen, therefore you are accessible, therefore you are my possession if I so choose.
