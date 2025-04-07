@@ -9,6 +9,8 @@
 
 *"Convenience in the face of discomfort is a trap; someone designed it that way."*
 
+Peter talked anout anti homeless architecture. Benched, urban planning. Parking garages, windows, gaps, deters against committing crimes— as criminals can be "watched".
+
 ## "Convenient" Updates = Control?
 >
 > When and why did “quality of life” become a euphemism for control? Is it always the case? Is it true?
