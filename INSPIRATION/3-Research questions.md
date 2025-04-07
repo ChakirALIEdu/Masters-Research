@@ -23,4 +23,9 @@ Look into it through game design, user interfaces...? I feel like that statement
 
 *"Exposure and visibility thus become **consent** in the eyes of others."*
 
+
+Like in regards to Google Maps for example, how many things ahev we accepted that encroach in our privacy? Decurity cameras, maps, things we take for face value that do a bunch of things.
+
+
+Tech literacy, young people, "file path structure", how much stuff we take for granted
 You are seen, therefore you are accessible, therefore you are my possession if I so choose.
