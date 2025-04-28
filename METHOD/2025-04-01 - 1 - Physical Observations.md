@@ -55,6 +55,10 @@ Otherwise, everyone in Anière was welcoming. It's a place pretty far from centr
 
 ## As in, comfort erodes the need for privacy.
 
+
+Passively, not actively I think. Isn't comfort a passive action? Unsure. What even IS privacy, actually...?
+
+
 The rest of my notes at the hospital were pretty similar. The patients all said hi to me. I walked around without a care in the world and workers said hi to me. I entered through the wrong entrance and it seemed like nobody cared. I assissted my mom during her physiotherapy session, and the guy working there was really eager to welcome me and say hi to me. I asked if it was okay for me to even be there, and he said he didn't care.
 
 I noted a few more things. The 4 workers for 7 patients, the printed warning signs and signals (This is this room, this is that room, don't wear shoes in the pool, etc...) the plants freshly planted right outside the window, the deffibrillator, the bar with pastries and lemonade served... 
