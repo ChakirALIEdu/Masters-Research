@@ -29,3 +29,18 @@ Like in regards to Google Maps for example, how many things ahev we accepted tha
 
 Tech literacy, young people, "file path structure", how much stuff we take for granted
 You are seen, therefore you are accessible, therefore you are my possession if I so choose.
+
+
+#  FRICTIONLESS DESIGN IS COERCION AND CONTROL. FRICTION IS THE ALTERNATIVE, AND THE SOLUTION.
+
+> The goal would be to prove the following:
+- What is frictionless design and why is it bad?
+- Why do I say "Design is coercion"? Origin of those philosophies, methods used, applications daily...
+- What will happen in the future?
+- What are the alternatives? 
+- What is the solution?
+
+My actual goal would be to prove an alternative can work. 
+I want to write about an alternative in which softwares can gain success by allowing more control to users, or at the very least stepping back from this control (which also inadvertently creates computer illiteracy...)
+
+I want to prove that NOT using design to coerce users is better, if possible. I think that's the goal of my master's thesis. Prove that an alternative is so good, so truthful, so inevitable, that the method we're using now is obsolete and outrageous in comparison. 
