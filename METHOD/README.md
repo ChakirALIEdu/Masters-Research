@@ -4,4 +4,4 @@ This directory contains my main active research material, my musings, my reflect
 
 ## Contents
 
-Dude, like... everything.
+Dude, like... everything. Every thought, every reflection, every anxiety, every "divagation", every return to the topic...
