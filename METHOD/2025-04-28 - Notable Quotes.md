@@ -1,4 +1,26 @@
-# Notable Quotes and Insights
+# Notable Quotes Insights
+
+
+Just compiling quotes and sentences from my research to help understand points, arguments, and other ideas I came across. 
+In order to reach a coherent research, I need to go back to what my points were.
+
+---
+
+#  FRICTIONLESS DESIGN IS COERCION AND CONTROL. FRICTION IS THE ALTERNATIVE, AND THE SOLUTION.
+
+> The goal would be to prove the following:
+- What is frictionless design and why is it bad?
+- Why do I say "Design is coercion"? Origin of those philosophies, methods used, applications daily...
+- What will happen in the future?
+- What are the alternatives? 
+- What is the solution?
+
+> My actual goal would be to prove an alternative can work. 
+I want to write about an alternative in which softwares can gain success by allowing more control to users, or at the very least stepping back from this control (which also inadvertently creates computer illiteracy...)
+
+> I want to prove that NOT using design to coerce users is better, if possible. I think that's the goal of my master's thesis. Prove that an alternative is so good, so truthful, so inevitable, that the method we're using now is obsolete and outrageous in comparison. 
+
+----
 
 ## The Inverse Relationship Between Comfort and Privacy
 
@@ -50,7 +72,7 @@
 
 > "Exposure and visibility thus become consent in the eyes of others. I exist, therefore I consent to having my picture taken, my space invaded, my doors unlocked, my privacy eroded." - 2025-04-03
 
-## Convenience is a Tool for Privacy Erosion
+## Convenience is a Tool for the Erosion of Privacy
 
 > "I didn't steal; the system we had in place handed me power because I 'offered help.' That's how convenience reverses the direction of consent." - 2025-04-04
 
@@ -64,7 +86,7 @@
 
 > "Passwords disappearing means that they can create a User Experience for connecting (designed email, confirmation, asking you to buy stuff or fill a survey). The prerequisites for connecting are no longer: create an account, have a password, you get to enter. You no longer control this. They grant you access, and they will take advantage of that. An ongoing performance of trust." - 2025-04-09
 
-## The Human Spirit in the Digital World
+## Idiosyncracies
 
 > "Parts of people will shine through, always." - 2025-04-02 (reflecting on personal touches in website code)
 
