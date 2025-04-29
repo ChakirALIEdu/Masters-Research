@@ -22,6 +22,21 @@ I want to write about an alternative in which softwares can gain success by allo
 
 ----
 
+
+## Yesterday's insights
+
+I'll write down notes from Joël Vacheron.
+
+> NOTES: Definition de la friction a me réapproprier. (une dimension éthnographique dans mon travail qui doit rester...)
+
+> NOTES: (l'homme public, perdre de vu l'homme public, perdu l'épaisseur du tissu social...)
+> NOTES: (Privacy, why do I use that word... DEFINE IT) (Digital Neocolonialism, compare TOS to treaties that colonizers forced on indigenous people.)
+
+There is an ethnographic aspect to my research and studies that are interesting to look further into. Branching out to broaden my knowledge and angles of attack would only benefit the point of my research, my argumentation and the way I express myself. 
+
+Ethnography - Definition: 
+> "descriptive study of a particular human society or the process of making such a study. Contemporary ethnography is based almost entirely on fieldwork and requires the complete immersion of the anthropologist in the culture and everyday life of the people who are the subject of his study." quote from [Britannica](https://www.britannica.com/science/ethnography), accessed on 2024-05-29 at 09:23am. 
+
 ## The Inverse Relationship Between Comfort and Privacy
 
 > "In the face of comfort, people's sense of privacy (or the need for one) eroded to the point where I could simply look into people's homes and enter their private spaces, and walk out without any issues or arguments." - 2025-04-01 - 1 - Physical Observations
