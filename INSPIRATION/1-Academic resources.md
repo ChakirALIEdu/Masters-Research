@@ -11,13 +11,11 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 
 ### Friction , Délires et faux-semblants - Anna Lowenhaupt Tsing -
 
-NOTES: Definition de la friction a me réapproprier. (une dimension éthnographique dans mon travail qui doit rester...)
 
 ### Les tyrannies de l'intimité - Richard Sennett 
 
 
-NOTES: (l'homme public, perdre de vu l'homme public, perdu l'épaisseur du tissu social...)
-NOTES: (Privacy, why do I use that word... DEFINE IT) (Digital Neocolonialism, compare TOS to treaties that colonizers forced on indigenous people.)
+### Against Flow - Video Games and the Flowing Subject by Braxton Soderman ISBN: 9780262045506
 
 ### BY - Wendy Hui Kyong Chun
 - *Programmed Visions: Software and Memory*
