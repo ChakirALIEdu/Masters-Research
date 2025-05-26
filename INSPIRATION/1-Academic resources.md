@@ -14,9 +14,6 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 
 ### Les tyrannies de l'intimité - Richard Sennett 
 
-
-### Against Flow - Video Games and the Flowing Subject by Braxton Soderman ISBN: 9780262045506
-
 ### BY - Wendy Hui Kyong Chun
 - *Programmed Visions: Software and Memory*
 - *Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition*
@@ -30,6 +27,14 @@ Here are a few academic resources that are worth looking into an dissecting, fro
 ### By Hakim Bey
 - *T.A.Z.: The Temporary Autonomous Zone*
 
+### By Braxton Soderman
+Against Flow
+Video Games and the Flowing Subject
+
+ISBN: 9780262045506
+Pub date: April 13, 2021
+Publisher: The MIT Press
+328 pp., 6 x 9 in, 34 b&w photos
 
 ## ACADEMIC REFS
 

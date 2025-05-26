@@ -6,7 +6,7 @@ We're getting close to Assignment 2...
 How does frictionless design—especially through access rituals like logins, app onboarding, and TOS erode user agency? What relationships do we develop with logins?
 
 ## Motivation
-This research emerges fro discomfort with how “ease” and “accessibility” have been misconstrued in recent years to allow for less and less user agency. Design often leads to the removal of a user's ability to think, intervene, or act. My aim is to critically question the ethics of such design, and propose friction not as failure, but as a meaningful choice that yields better results.
+This research emerges m discomfort with how “ease” and “accessibility” have been misconstrued in recent years to allow for less and less user agency. Design often leads to the removal of a user's ability to think, intervene, or act. My aim is to critically question the ethics of such design, and propose friction not as failure, but as a meaningful choice that yields better results.
 
 ## Literature and Related Projects
 - Chun, Wendy – *Programmed Visions*
