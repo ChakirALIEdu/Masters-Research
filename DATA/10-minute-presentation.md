@@ -6,14 +6,14 @@ Can't find your keys? Ahah. Jk. You don't have keys. Just ring the doorbell and 
 ____
 ## ACT 3 ACT 1 - Topic and research question(s)
 
-No earlier than last night, I received a flag warning on Instagram, telling me my account may have been suspected of being a bot, a non-human content creator, whose access to the website could be revoked in a flash.
+No earlier than last night, I received a flag warning on Instagram, telling me my account may have been suspected of being a bot, a non-human content creator, whose access to the website could be revoked in a flash. That's without mentioning the countless fights to login, to logout, to talk with IT, to accept dubious TOS at our expenses... The login experience, in recent years, has turned into a horrible experience that we aim to tame.
 
 There is a power asymmetry at play here. At the very moment we access an online platform, our accounts do not belong to us. (Some may say this is obvious;  we only ring the doorbell to the fortress, and we own no keys, no room, nothing.)
 
 We're only allowed access, at any given time. But the user experience is designed in such a way to make you believe that accounts online belong to you, and so does your data. How much of that is true? (Lately, I have personally been feeling like I do not control what part of myself gets online or not.)
 
 Why do platforms treat my identity, data, and memories as assets I lease rather than own? Why am I no longer trusted with my own data and its access?
-
+Where is the login experience headed?
 What would onboarding look like if, if we could design the login experience give people more agency? or affordance?
 
 ### ACT 3 INTERMISSION 1
