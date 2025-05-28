@@ -8,7 +8,7 @@ ____
 
 No earlier than last night, I received a flag warning on Instagram, telling me my account may have been suspected of being a bot, a non-human content creator, whose access to the website could be revoked in a flash.
 
-There is a power asymmetry at play here. At the very moment we access an online platform, our accounts do not belong to us. Some may say this is obvious;  we only ring the doorbell to the fortress, and we own no keys, no room, nothing. 
+There is a power asymmetry at play here. At the very moment we access an online platform, our accounts do not belong to us. (Some may say this is obvious;  we only ring the doorbell to the fortress, and we own no keys, no room, nothing.)
 
 We're only allowed access, at any given time. But the user experience is designed in such a way to make you believe that accounts online belong to you, and so does your data. How much of that is true? (Lately, I have personally been feeling like I do not control what part of myself gets online or not.)
 
