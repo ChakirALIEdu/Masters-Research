@@ -14,7 +14,7 @@ We're only allowed access, at any given time. But the user experience is designe
 
 Why do platforms treat my identity, data, and memories as assets I lease rather than own? Why am I no longer trusted with my own data and its access?
 
-What would onboarding look like if, if we could design the login experience give people a bit more agency? or affordance?
+What would onboarding look like if, if we could design the login experience give people more agency? or affordance?
 
 ### ACT 3 INTERMISSION 1
 
