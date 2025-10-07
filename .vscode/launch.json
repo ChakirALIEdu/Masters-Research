@@ -1,0 +1,22 @@
+{
+  // Launch configurations for debugging the experimental HTML prototype
+  // Use the Microsoft Edge or Chrome debugger extension to enable the browser launch.
+  // This file provides two simple launch configs that open the local file in a browser.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Open exp1.html (Chrome)",
+      "file": "${workspaceFolder}/OUTPUT/Experimental login/exp1.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open exp1.html (Edge)",
+      "file": "${workspaceFolder}/OUTPUT/Experimental login/exp1.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

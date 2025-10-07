@@ -1,0 +1,385 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Login — action confirmation</title>
+	<style>
+		:root{--bg:#f3f3f3;--muted:#bdbdbd;--warm:#f6c86e;--accent:#ffb74d;--danger:#e57373}
+		body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--bg);}
+		.app{width:920px; max-width:96vw; border-radius:12px; box-shadow:0 6px 28px rgba(0,0,0,.12); overflow:hidden;}
+		header{padding:18px 22px; background:linear-gradient(180deg,#fff 0%, #fafafa 100%); display:flex; align-items:center; justify-content:space-between}
+		header h1{margin:0; font-size:18px}
+		main{display:flex; gap:0}
+		.panel{padding:18px; width:50%; box-sizing:border-box}
+		.left{background:#fff; border-right:1px solid #eee}
+		.right{background:linear-gradient(180deg,#fafafa,#fff)}
+		.muted{color:var(--muted)}
+
+		/* login / selection UI */
+		.controls{display:flex; flex-direction:column; gap:12px}
+		.btn{background:var(--accent); color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer}
+		.btn.ghost{background:transparent; color:var(--accent); border:1px dashed #ffd59b}
+		.actions{display:flex; flex-direction:column; gap:8px}
+		label.action{display:flex; gap:10px; align-items:center; padding:10px; border-radius:8px; cursor:pointer; border:1px solid #eee}
+		label.action input{margin-right:8px}
+
+		/* home preview */
+		.home{display:flex; flex-direction:column; gap:14px}
+		.posts{display:flex; flex-direction:column; gap:8px}
+		.post{padding:12px; border-radius:8px; background:#fff; border:1px solid #eee; cursor:pointer}
+		.folders{display:flex; gap:8px; flex-wrap:wrap}
+		.folder{padding:10px 12px; background:#eceff1; border-radius:8px}
+
+		/* overlay state colors */
+		.locked{filter:grayscale(.6) contrast(.9); background:linear-gradient(180deg,#f3f3f3,#e9e9e9)}
+		.success header, .success .left{background:linear-gradient(180deg,#fff8e1,#fff3d0)}
+		.success .btn{background:var(--warm);}
+
+		/* themes applied after faceid simulation */
+		.theme-happy header, .theme-happy .left{background:linear-gradient(180deg,#fff9e6,#fff3d9)}
+		.theme-happy .btn{background:var(--warm)}
+		.theme-happy .post{box-shadow:0 2px 0 rgba(255,183,77,.08);}
+
+		.theme-frown header, .theme-frown .left{background:linear-gradient(180deg,#eef5ff,#e6eefb)}
+		.theme-frown .btn{background:#90a4ae}
+		.theme-frown .post{opacity:.9}
+
+		.status{display:flex; gap:10px; align-items:center}
+		.status .dot{width:12px; height:12px; border-radius:50%; background:var(--muted)}
+		.status.success .dot{background:var(--warm)}
+		.status.fail .dot{background:var(--danger)}
+
+		footer{padding:12px 18px; background:#fafafa; text-align:right}
+
+		.timer{font-weight:700}
+		.note{font-size:13px; color:#666}
+	</style>
+</head>
+<body>
+		<!-- Step 1: Login screen (separate) -->
+		<div id="loginScreen" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2));">
+			<div style="background:#fff;padding:22px;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.16);width:420px;max-width:92vw">
+			<h2 style="margin-top:0">Sign in</h2>
+				<div style="display:flex;flex-direction:column;gap:8px">
+					<input id="username" placeholder="username" aria-label="username" />
+				  <input id="password" placeholder="password" type="password" aria-label="password" />
+					<div style="display:flex;gap:8px;justify-content:flex-end">
+					<button class="btn" id="loginBtnOverlay">Login</button>
+					<button class="btn ghost" id="resetBtnOverlay">Reset</button>
+					</div>
+				<p class="note">After sign in you'll be asked to choose a confirmation action for the next step.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Step 2: Action selection (separate screen) -->
+				<div id="selectScreen" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95));">
+					<div style="width:760px;max-width:96vw;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.12);padding:18px;">
+						<h2 style="margin-top:0">Select confirmation action</h2>
+						<p class="note">Choose how you'll confirm your presence on the next page. Perform the chosen action within the timer or you'll be logged out.</p>
+						<div id="selectArea" style="margin-top:8px">
+							<div class="actions" role="radiogroup" aria-label="preferred action">
+								<label class="action"><input type="radio" name="action" value="clickFirst" checked />Click the FIRST post</label>
+								<label class="action"><input type="radio" name="action" value="createFolder" />Create a folder named <strong>ENTRY</strong></label>
+								<label class="action"><input type="radio" name="action" value="wait" />Don't interact for <input id="waitSeconds" type="number" value="10" min="3" max="60" style="width:70px; margin-left:8px"/> seconds</label>
+							</div>
+							<div style="display:flex; gap:8px; margin-top:12px; align-items:center;">
+								<label class="note">Timer (seconds)</label>
+								<input id="duration" type="number" min="5" max="120" value="30" style="width:80px" />
+							</div>
+							<div style="margin-top:12px; display:flex; gap:8px;">
+								<button class="btn" id="startSession">Continue to Home</button>
+								<button class="btn ghost" id="demoFail">Cancel / Log out</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="app locked" id="app" style="display:none;">
+		<header>
+			<h1>Login — action confirm</h1>
+			<div class="status muted" id="statusBar"><span class="dot"></span><span id="statusText" class="muted">Locked</span></div>
+		</header>
+		<main>
+					<section class="panel left" id="panelLeft">
+						<div class="controls">
+							<div id="feedback" style="display:none">
+								<p id="message" class="note"></p>
+								<div style="display:flex; gap:8px; margin-top:8px;">
+									<button class="btn" id="retry">Retry</button>
+									<button class="btn ghost" id="requestCode">Request code (fallback)</button>
+								</div>
+							</div>
+						</div>
+					</section>
+			<section class="panel right" id="panelRight">
+				<div class="home">
+					<div style="display:flex; justify-content:space-between; align-items:center">
+						<div>
+							<strong>Home preview</strong>
+							<div class="note">Perform the chosen action here while the timer runs.</div>
+						</div>
+						<div class="note">Time left: <span class="timer" id="timeLeft">—</span></div>
+					</div>
+
+					<div>
+						<div style="margin-top:10px">
+							<strong>Posts</strong>
+							<div class="posts" id="posts">
+												<div class="post" data-index="1">Post 1 — click me</div>
+								<div class="post" data-index="2">Post 2</div>
+								<div class="post" data-index="3">Post 3</div>
+							</div>
+						</div>
+
+						<div style="margin-top:14px">
+							<strong>Folders</strong>
+							<div class="folders" id="folders">
+								<div class="folder">Documents</div>
+								<div class="folder">Images</div>
+							</div>
+							<div style="margin-top:8px">
+								<input id="newFolderName" placeholder="Folder name" aria-label="new folder name" />
+								<button class="btn" id="createFolderBtn">Create folder</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+			<footer>
+				<span class="note"></span>
+			</footer>
+	</div>
+
+	<script>
+		// Minimal prototype logic — coordinate three screens: login -> select -> home
+		const app = document.getElementById('app');
+		const loginScreen = document.getElementById('loginScreen');
+		const selectScreen = document.getElementById('selectScreen');
+		const loginBtn = document.getElementById('loginBtnOverlay');
+		const resetBtn = document.getElementById('resetBtnOverlay');
+		const selectArea = document.getElementById('selectArea');
+		const startSession = document.getElementById('startSession');
+		const durationInput = document.getElementById('duration');
+		const timeLeftEl = document.getElementById('timeLeft');
+		const statusText = document.getElementById('statusText');
+		const statusBar = document.getElementById('statusBar');
+		const message = document.getElementById('message');
+		const feedback = document.getElementById('feedback');
+		const retry = document.getElementById('retry');
+		const requestCode = document.getElementById('requestCode');
+		const posts = document.getElementById('posts');
+		const createFolderBtn = document.getElementById('createFolderBtn');
+		const newFolderName = document.getElementById('newFolderName');
+		const folders = document.getElementById('folders');
+		const demoFail = document.getElementById('demoFail');
+
+		let sessionTimer = null;
+		let remaining = 0;
+		let chosenAction = 'clickFirst';
+		let sessionActive = false;
+		let waitMode = false;
+		let waitSecondsInput = document.getElementById('waitSeconds');
+
+		// helpers
+		function setLocked() {
+			app.classList.add('locked');
+			app.classList.remove('success');
+			statusText.textContent = 'Locked';
+			statusBar.className = 'status muted';
+		}
+		function setSuccess() {
+			app.classList.remove('locked');
+			app.classList.add('success');
+			statusText.textContent = 'Confirmed';
+			statusBar.className = 'status success';
+		}
+		function setFailed() {
+			app.classList.add('locked');
+			app.classList.remove('success');
+			statusText.textContent = 'Logged out';
+			statusBar.className = 'status fail';
+		}
+
+			setLocked();
+
+			// Step 1: login
+			loginBtn.addEventListener('click', () => {
+				const u = document.getElementById('username').value.trim();
+				const p = document.getElementById('password').value;
+				if (!u) { alert('Enter a username to simulate login'); return; }
+				// hide login, show selection screen
+				loginScreen.style.display = 'none';
+				selectScreen.style.display = 'flex';
+				// store username in memory (no duplicate inputs)
+				window.__simUser = u;
+			});
+
+			resetBtn.addEventListener('click', () => location.reload());
+
+		// track action radio
+		document.querySelectorAll('input[name="action"]').forEach(r => r.addEventListener('change', (e)=>{
+			chosenAction = e.target.value;
+			waitMode = chosenAction === 'wait';
+			if (waitMode) durationInput.value = Math.max(5, parseInt(waitSecondsInput.value || 10));
+		}));
+
+			// start session: show home and start timer — triggered from selectScreen
+			startSession.addEventListener('click', ()=>{
+				const raw = parseInt(durationInput.value,10) || 30;
+				remaining = Math.max(3, raw);
+				// if wait mode uses its own seconds
+				if (waitMode) remaining = Math.max(3, parseInt(waitSecondsInput.value,10) || remaining);
+
+						// hide selection screen and reveal home app
+						selectScreen.style.display = 'none';
+						app.style.display = 'block';
+
+						// Apply face expression theme if provided by faceid flow
+						try{
+							const expr = localStorage.getItem('faceExpression');
+							if (expr){
+								app.classList.remove('success');
+								app.classList.remove('locked');
+								app.classList.add('theme-' + expr);
+								// small visual mapping: happy -> warm, frown -> cool/dim, neutral -> default
+								if (expr === 'happy') setSuccess();
+								else if (expr === 'frown') setFailed();
+								// clear for next time
+								localStorage.removeItem('faceExpression');
+							}
+						}catch(e){}
+
+				sessionActive = true;
+				feedback.style.display = 'none';
+				setLocked();
+				timeLeftEl.textContent = remaining + 's';
+				// start countdown
+				if (sessionTimer) clearInterval(sessionTimer);
+				sessionTimer = setInterval(()=>{
+					remaining -= 1;
+					timeLeftEl.textContent = (remaining > 0 ? remaining + 's' : '0s');
+					if (remaining <= 0) {
+						clearInterval(sessionTimer);
+						sessionTimer = null;
+						// session ended — failure if not confirmed
+						if (sessionActive) failSession('Time expired — you were logged out.');
+					}
+				}, 1000);
+
+				// attach temporary listeners for actions
+				attachActionListeners();
+			});
+
+		demoFail.addEventListener('click', ()=> failSession('Manually forced logout (demo).'));
+
+		function attachActionListeners(){
+			// posts click
+			posts.querySelectorAll('.post').forEach(p=>{
+				p.addEventListener('click', postClickHandler);
+			});
+
+			createFolderBtn.addEventListener('click', createFolderHandler);
+
+			// user interactions that invalidate wait mode
+			if (waitMode) {
+				const cancelOnInteract = (ev)=>{
+					// ignore if interaction is from the waitSeconds control itself
+					if (ev.target === waitSecondsInput) return;
+					// any click or key press during wait mode counts as failure
+					failSession('You interacted during the "wait" action — logout.');
+				};
+				document.addEventListener('click', cancelOnInteract, {once:true});
+			}
+		}
+
+		function postClickHandler(e){
+			const idx = e.currentTarget.getAttribute('data-index');
+			if (!sessionActive) return;
+			if (chosenAction === 'clickFirst' && idx === '1') {
+				succeedSession('First post clicked — confirmed.');
+			} else {
+				// clicking wrong element isn't immediate fail, but doesn't confirm
+				message.textContent = 'That was not the selected action.';
+				feedback.style.display = 'block';
+			}
+		}
+
+		function createFolderHandler(){
+			if (!sessionActive) return;
+			const name = (newFolderName.value || '').trim();
+			if (!name) { alert('Enter a folder name'); return; }
+			const el = document.createElement('div');
+			el.className = 'folder';
+			el.textContent = name;
+			folders.appendChild(el);
+			// confirm if matches ENTRY when chosen
+			if (chosenAction === 'createFolder' && name.toUpperCase() === 'ENTRY') {
+				succeedSession('Folder ENTRY created — confirmed.');
+			} else if (chosenAction === 'createFolder'){
+				message.textContent = 'Created a folder but name must be ENTRY to confirm.';
+				feedback.style.display = 'block';
+			}
+		}
+
+		function succeedSession(text){
+			sessionActive = false;
+			if (sessionTimer) { clearInterval(sessionTimer); sessionTimer = null; }
+			setSuccess();
+			message.textContent = text;
+			feedback.style.display = 'block';
+			timeLeftEl.textContent = '—';
+		}
+
+			function failSession(text){
+				// End session, show failure then return to login screen
+				sessionActive = false;
+				if (sessionTimer) { clearInterval(sessionTimer); sessionTimer = null; }
+				setFailed();
+				message.textContent = text;
+				feedback.style.display = 'block';
+				timeLeftEl.textContent = '—';
+
+				// After a short delay show the login screen and reset UI
+						setTimeout(()=>{
+					// hide app and selection screen
+					app.style.display = 'none';
+					selectScreen.style.display = 'none';
+					// reset visual state
+							setLocked();
+							// remove theme classes
+							app.className = app.className.split(' ').filter(c=>!c.startsWith('theme-')).join(' ');
+					feedback.style.display = 'none';
+					// show login
+					loginScreen.style.display = 'flex';
+					// clear sensitive inputs
+					const userIn = document.getElementById('username');
+					const passIn = document.getElementById('password');
+					if (userIn) userIn.value = '';
+					if (passIn) passIn.value = '';
+					// clear stored simulated user
+					window.__simUser = null;
+				}, 700);
+			}
+
+		retry.addEventListener('click', ()=>{
+			feedback.style.display = 'none';
+			selectArea.style.display = 'block';
+			setLocked();
+		});
+
+		requestCode.addEventListener('click', ()=>{
+			alert('Fallback code requested (simulated). In a real system an OTP would be sent.)');
+		});
+
+		// ensure keyboard accessibility: Enter on create folder triggers create
+		newFolderName.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ createFolderBtn.click(); } });
+
+		// basic cleanup: remove listeners when logged out (simple approach)
+		// Note: this is a prototype — production needs stronger lifecycle handling
+	</script>
+</body>
+</html>

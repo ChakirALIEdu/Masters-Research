@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FaceID preview (local demo)</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f6f6f6}
+    .card{width:760px;max-width:96vw;background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.12)}
+    video{width:100%;border-radius:8px;background:#000}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .btn{background:#2a7; color:#fff;border:none;padding:10px 12px;border-radius:8px;cursor:pointer}
+    .btn.ghost{background:#eee;color:#333}
+    .note{color:#666;font-size:13px}
+    .warning{color:#b33}
+    .status{margin-top:12px;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>FaceID (demo)</h2>
+    <p class="note">This file is a separate local demo for a FaceID-style flow. It does not perform real face recognition and does not send video/data anywhere. Use this page to prototype consent, camera permission, and a simulated expression confirmation.</p>
+
+    <div id="consentArea">
+      <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="consent" /> I consent to enable the camera for a local demo (no upload)</label>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="startBtn">Enable camera</button>
+        <button class="btn ghost" id="stopBtn">Disable camera</button>
+      </div>
+    </div>
+
+    <div id="videoArea" style="margin-top:12px;display:none">
+      <video id="video" autoplay playsinline></video>
+      <div class="controls">
+        <button class="btn" id="simHappy">Simulate: Happy</button>
+        <button class="btn" id="simNeutral">Simulate: Neutral</button>
+        <button class="btn" id="simFrown">Simulate: Frown</button>
+        <button class="btn ghost" id="captureStill">Capture still (local)</button>
+      </div>
+      <div class="status" id="status">Waiting for simulation...</div>
+      <p class="note">Buttons above simulate facial-expression detection for prototyping only. To integrate a real detector, replace the simulation handlers with a model/call and respect privacy and consent.</p>
+    </div>
+
+    <div style="display:flex;justify-content:flex-end;margin-top:12px;gap:8px">
+      <button class="btn ghost" id="back">Back</button>
+      <button class="btn" id="finish">Finish (simulate success)</button>
+    </div>
+  </div>
+
+  <script>
+    const consent = document.getElementById('consent');
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const videoArea = document.getElementById('videoArea');
+    const video = document.getElementById('video');
+    const simHappy = document.getElementById('simHappy');
+    const simNeutral = document.getElementById('simNeutral');
+    const simFrown = document.getElementById('simFrown');
+    const captureStill = document.getElementById('captureStill');
+    const status = document.getElementById('status');
+    const back = document.getElementById('back');
+    const finish = document.getElementById('finish');
+
+    let stream = null;
+
+    async function startCamera(){
+      if (!consent.checked) { alert('Please check consent first'); return; }
+      try{
+        stream = await navigator.mediaDevices.getUserMedia({video:true,audio:false});
+        video.srcObject = stream;
+        videoArea.style.display = 'block';
+        status.textContent = 'Camera enabled — use simulation buttons';
+      }catch(e){
+        console.error(e);
+        alert('Unable to access camera: ' + (e && e.message));
+      }
+    }
+
+    function stopCamera(){
+      if (stream){
+        stream.getTracks().forEach(t => t.stop());
+        stream = null;
+      }
+      video.srcObject = null;
+      videoArea.style.display = 'none';
+      status.textContent = '';
+    }
+
+    startBtn.addEventListener('click', startCamera);
+    stopBtn.addEventListener('click', stopCamera);
+
+  let currentExpression = 'neutral';
+  simHappy.addEventListener('click', ()=>{ currentExpression = 'happy'; status.textContent = 'Detected: Happy (simulated)'; status.style.color = '#2a7'; });
+  simNeutral.addEventListener('click', ()=>{ currentExpression = 'neutral'; status.textContent = 'Detected: Neutral (simulated)'; status.style.color = '#666'; });
+  simFrown.addEventListener('click', ()=>{ currentExpression = 'frown'; status.textContent = 'Detected: Frown (simulated)'; status.style.color = '#b33'; });
+
+    captureStill.addEventListener('click', ()=>{
+      if (!stream){ alert('Camera is not enabled'); return; }
+      const w = video.videoWidth, h = video.videoHeight;
+      const canvas = document.createElement('canvas'); canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d'); ctx.drawImage(video,0,0,w,h);
+      // This image stays local in the page and is not uploaded anywhere
+      const data = canvas.toDataURL('image/png');
+      const win = window.open(data, '_blank');
+      status.textContent = 'Captured still (opens in new tab)';
+    });
+
+    back.addEventListener('click', ()=>{
+      // navigate back to the main selection/login file
+      window.location.href = './exp1.html';
+    });
+
+    finish.addEventListener('click', ()=>{
+      // Store the simulated expression for the main app to read
+      try { localStorage.setItem('faceExpression', currentExpression || 'neutral'); } catch(e){}
+      alert('Simulate success: returning to main site (expression: ' + (currentExpression||'neutral') + ')');
+      // Redirect back to the main app
+      window.location.href = './exp1.html';
+    });
+
+    // Clean up camera on unload
+    window.addEventListener('beforeunload', ()=>{ stopCamera(); });
+  </script>
+</body>
+</html>
