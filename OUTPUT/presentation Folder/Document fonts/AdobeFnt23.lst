@@ -1,0 +1,51 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FranklinGothic-Medium
+FamilyName:Franklin Gothic Medium
+StyleName:Regular
+FullName:Franklin Gothic Medium
+MenuName:Franklin Gothic Medium
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\backup\-MASTER\Masters-Research\OUTPUT\presentation Folder\Document fonts\framd.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:133632
+FileModTime:1575713317
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Franklin Gothic Medium
+NameArray:0,Win,1,Franklin Gothic Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FranklinGothic-MediumItalic
+FamilyName:Franklin Gothic Medium
+StyleName:Italic
+FullName:Franklin Gothic Medium Italic
+MenuName:Franklin Gothic Medium
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:D:\backup\-MASTER\Masters-Research\OUTPUT\presentation Folder\Document fonts\framdit.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:148728
+FileModTime:1575713317
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Mac,4,Franklin Gothic Medium Italic
+NameArray:0,Win,1,Franklin Gothic Medium
+%EndFont
+

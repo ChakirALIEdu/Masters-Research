@@ -40,7 +40,7 @@ governmental enforcement into everyday situations, making us “ subjects ” of
 
 I want to adopt an auto-ethnographic method, like I have done in my notes: Documented experiences with frustrating access login experiences (Outlook, Pokémon TCG, etc.). a lens that privileges lived experience as a source of design insight. It is a lens that privileges lived experience as a source of design insight.
 
-Quantitative interviews with users who’ve experienced friction with logins, account recovery, platform lockouts... The goal would be to amass multiple users per platform and ask about their experiences and see what I can gather from there.
+Qualitative interviews with users who’ve experienced friction with logins, account recovery, platform lockouts... The goal would be to amass multiple users per platform and ask about their experiences and see what I can gather from there.
 
 
 
