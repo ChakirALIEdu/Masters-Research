@@ -4,6 +4,7 @@
   // This file provides two simple launch configs that open the local file in a browser.
   "version": "0.2.0",
   "configurations": [
+    
     {
       "type": "chrome",
       "request": "launch",

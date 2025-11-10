@@ -1,0 +1,22 @@
+Design proposals (summary)
+
+This document summarizes three design proposals developed as interactive prototypes: (1) Presence-confirmation login, (2) Password Quests (micro-task triage), and (3) Authenticator improvements (color-by-position + rotor input). Each proposal emphasizes usability, accessibility, and empirical evaluation.
+
+1. Presence-confirmation login
+A short, time-limited interaction (e.g. perform a simple action within 30 s) confirms user presence before granting access. Goal: increase user awareness and reduce accidental or automated logins while keeping friction low. Key considerations: provide clear instructions, optional extension or alternative methods for users requiring more time, and full ARIA/voice support. Evaluate via success rate, completion time, abandonment and perceived clarity.
+
+2. Password Quests
+Break down remediation of compromised credentials into daily micro‑tasks (e.g. 2–3 small tasks/day). The manager proposes an ordered plan, guides the user to change a password manually, and records the new credential only when supplied. Goal: reduce cognitive load and procrastination. Privacy note: local encrypted storage or secure manager APIs should be used; prototype confirms no outbound transmission.
+
+3. Authenticator: color-by-position + rotor input
+Display 6-digit OTPs with a stable color/shape per position and a legend; offer alternate entry via a circular rotary dial or per-position rotors. Goal: improve short-term visual retention and provide a tactile/sequential entry that may reduce input errors on small devices. Accessibility: include non‑color cues (shapes, labels), keyboard and screen-reader support, and user toggles for color, contrast and motion.
+
+Evaluation and integration
+Treat these features as configurable options with fallbacks to standard flows. Recommended evaluation mixes lab and short longitudinal studies: task success, time-on-task, error rates, and user preference collected across diverse participants. Prioritize accessibility testing with assistive technologies.
+
+Selected references (HES‑SO / ISO 690 style)
+BONNEAU, Joseph; HERLEY, Cormac; VAN OORSCHOT, Paul C.; STAJANO, Frank. The quest to replace passwords: A framework for comparative evaluation of web authentication schemes. In: 2012 IEEE Symposium on Security and Privacy. 2012.
+
+WARE, Colin. Information visualization: perception for design. 3rd ed. Burlington, MA: Morgan Kaufmann, 2013.
+
+GAW, Shiri; FELTEN, Edward W. Password management strategies. In: Proceedings of the 2006 Workshop on Human-Computer Interaction Security and Privacy. 2006.

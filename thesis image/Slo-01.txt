@@ -1,0 +1,75 @@
+(Transcribed by TurboScribe.ai. Go Unlimited to remove this message.)
+
+We're recording? Do I already have your consent to record you? Yes. Is everything okay? Are you comfortable? Are you comfortable? Yes. I would like to ask you to introduce yourself quickly, so that I can contextualize you.
+
+I'm not going to mention you in the text, I'm not going to give you your name and everything, but just know your practice, your age range, that kind of thing. Yeah, yeah. So I introduce myself? So I introduce myself? Okay.
+
+So, I'm 28 years old. I work in the IT department of the State of Neuchâtel as a project manager and developer designer. In my leisure time, I also touch a lot of computers because of my passion.
+
+And I'm particularly into databases and logins as well. No, not necessarily, because I'm not in security either, so... I'm going to ask you a question, but first of all, please introduce yourself. What do you do? What do you think about DevOps? Well, as is often the case, security is something quite complex.
+
+So it's true that reinventing the system seems quite complicated. Finding an alternative or a new approach seems quite complex to me. But I find it interesting because it's not necessarily a new login that you propose, but a new way to do it, to authenticate yourself.
+
+It's true that right now, it's very uniform and it's not necessarily the easiest thing to do. I can think about the technological break with the most advanced generations. It's true that registering, creating an account, there are tools that make things easier, especially by authenticating yourself with our Google account or others.
+
+But it's never necessarily a very simple step in getting hold of a website or an application. It's a bit of everything. From the user's point of view, I find that, as you say, there is a standardization that has been made that is perhaps not the easiest from the user's point of view, and which is not the most optimized for UX, for example.
+
+There are people who speak French and who say that for them, it's not necessarily good in technology to have CSS and everything. Well, it's good for security, they recognize it, but in the case of French speakers, it's very difficult to put a hand, to quickly make the connection, as if there was a lack of communication. In fact, what I'm doing is perfect.
+
+What I was saying before, is that the users are not necessarily informed, and the systems are quite opaque, and it still generates a certain precision, and maybe, as I said, a certain dimension to the users afterwards. As I said here, I emphasize, do not hesitate to reinvent yourself. As I said, I really recognize the fact that it's not always the case that the users in France want to take advantage of new technologies.
+
+It's true that I try to propose things, or implementations, but I am fully aware that it may not work. And that, I know, it may have reached the end of my thesis, but I realize that it's not always the case. Maybe it's going to be in the future, but from what I've seen in the case of YouTube, they implement a little differently and they draw all the lines.
+
+Yes, I try to, at least, even in the house, in the house of work, in the house of practice, and it costs money to the family, to the family, and it also takes time for the presence of people, to train the helpers. So I think that's it. Yes.
+
+Yes, I agree. I think that adding something a little more human, well, I can understand the interest, but it's true that it reminds me typically everything that was a secret question and a secret answer that we had a time for the recovery. Well, it's always a bit the thing, it's that it's easier to remember, but it's also information that can be known by others.
+
+And... No, don't worry. That's often what was noticed, that there was a lot of social engineering that was done around that, or even typically we take Facebook, because that's where there may be the most people sensitive to this kind of thing, but with challenges or things like that, you can make people say some information about themselves And with that, you can collect information to potentially break this kind of security to infiltrate people's accounts. ... Yeah.
+
+Typically, well, I don't know if it fits exactly what you're looking for, but there's already the authentication, the login on my PC, on the machine, then I have my login at the level of my remote connection and my session at work. After that, I have a lot of... How to say? I have a lot of logins that are already recorded, so we can think of everything that is, I don't know, social networks, or some applications on my computer, the login is already recorded, so I don't have to reconnect every time. And then, beyond that, maybe a clarification, I use a password manager that allows me to generate passwords when I create accounts, and I only have to keep a password for the manager, which must be robust, but it allows me to manage my passwords like that and not have to remember a lot of passwords.
+
+That's often the problem with authentication, we ask people to protect themselves as much as possible, passwords can be complicated or at least different, and after a while it's... How do we manage when we have several passwords to remember or for different platforms? And then we see all kinds of practices and derives with post-its on the screen, or places where it's marked. So, there's not only bad, but it's true that using a password manager allows you to take care of that, of these problems. But yeah.
+
+No, I changed a long time ago, I tested several of them, because there was a security breach on one of them, so it's not 100% viable. It was Aspace that had a problem 2-3 years ago, maybe even more. Maybe 2019... No, I don't remember.
+
+But yeah, Aspace had a breach so I switched to OnePassword after that. There are also local solutions, normally KeyPass, everything is local. Then you just need a minimum of synchronization, but to talk about your memory, it's more complicated to manage when you have to synchronize between the different sessions, because it's not managed by a server, as it can be for other managers.
+
+Yeah, that's it. You already answered this question, but I'd like to ask you a question. What do you like in particular about Autosynchronization? Well, I think what I like the most is that it automatizes the password management and the connection, in the sense that autocompletion also comes with it.
+
+And especially from a security point of view, it's true that I used to have several passwords, or I used to iterate a lot on a password by adding characters or words, etc. And you still have to remember each time which one you used, so it's testing the 10 passwords you have, and it allows you not to have any doubts. There is the site-password-couple which is directly managed by the application, and the password as such, we know it's secure, we can customize it ourselves as well.
+
+And that's it, it also allows this flexibility at the level of remembering passwords. Yes, everything is fine. Thank you.
+
+What do you mean by platform exactly? I would like to say site. It's true that I have applications that I often use, typically Discord, Spotify and Steam. But most of the time, I would say that I am mainly on sites as well, so I would like to say it's maybe where there are more instances with authentifications.
+
+Do you engage in any kind of authentication? I think in itself, if we think about the computer, also the phone, just unlock it, and then the different applications we have access to, the mail, applications on the PC, the various sites, I think I have about 10 or 20. Maybe I don't realize it but... Yes, so a lot more. I think triple that for me.
+
+Typically, every time I click on BlueSky, we count it as an authentication. Yes, typically, it happens a lot of times a day. So, no access at all? Is it locked out? Locked out, I think it's been a long time.
+
+I don't really have an idea that comes to me. I think it's more a question of... I was thinking, but old accounts that I had when I was younger that I no longer use and that in the end they are lost forever. Then, locked out, it depends.
+
+In itself, the password manager asks every 14 days to retrieve the main password to avoid that just with the data... What do you call it? Biometric. If something happens, it allows for additional security. So, there are times when I'm forced to reconnect with the main password to my manager.
+
+Otherwise, not so much, I'd say. To be disconnected without permission, no, I'd say it's quite rare. I don't really have an idea that comes to my mind.
+
+So, the password manager on my phone, to access my passwords, I have to grab the main password. But once I've grabbed it, for 14 days, I can just use the biometric data to connect to my manager. And that, in fact, it asks every 14 days to retrieve the password to avoid, I don't know, stealing a finger, I don't know, using your photo to unlock your phone, I don't know.
+
+It allows, by doing that, to be sure it's always the right person every 14 days. I don't know if it's really useful or not, but it's a security measure they've put in place. There's a certain security because if you log in on a phone or another, well, it avoids being able to guess it.
+
+But there can be cases where you use it against the person. I can imagine that it's not flawless. We could force to use the head of a person or his finger to unlock something.
+
+But we're talking about scenarios where it involves... I think it's quite safe, but it's true that there's always a need for that. Whereas with a password, you can't force someone to log in. Often what's done is that there's a hash created with... Let's say we have coordinates that correspond to dots on a face or a fingerprint.
+
+Those data will be concatenated and then modified to create a key that doesn't represent any real value, but that is generated from that. What's stored is this. It's often this hash.
+
+Through this, it checks if when you send or try to log in, the hash corresponds to the stored hash. Normally not. We save our heads.
+
+As usual, we don't know what's stored, but from what I've seen in the literature, that's how it works. If we talk about authentication, there are all kinds of laws that appear in the US or even in Great Britain where they want to verify the identity of the person and then we come across cases that are a bit more dangerous when it comes to data protection. I saw that Discord had a data leak with identity data so we can see that it's dangerous.
+
+These are official documents. Normally not. If you want to save a password on a database, it will never be clear in the database.
+
+It should be the same principle. Normally there is the whole system of public and private keys so with what's in the database, we can't solve a password. As usual, with a bit of effort, everything breaks.
+
+Sorry if I went in a big tangent. Yes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+(This file is longer than 30 minutes. Go Unlimited at TurboScribe.ai to transcribe files up to 10 hours long.)

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OTP — affichage 6 chiffres (30s)</title>
+  <style>
+    :root{--bg:#f5f7fb;--card:#fff;--muted:#6b7280}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:#0f172a;display:flex;min-height:100vh;align-items:center;justify-content:center}
+    .card{background:var(--card);padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.08);width:520px;max-width:94%}
+    h1{margin:0 0 12px;font-size:18px}
+    .otp{display:flex;gap:12px;justify-content:center;margin:18px 0}
+    .digit{width:64px;height:84px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;color:white}
+    .meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .timer{display:flex;align-items:center;gap:10px}
+    .progress{width:120px;height:10px;background:rgba(0,0,0,.08);border-radius:6px;overflow:hidden}
+    .bar{height:100%;background:linear-gradient(90deg,#2b6cb0,#2a9d8f);width:0%}
+    .small{font-size:13px;color:var(--muted)}
+    .legend{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+    .legend .item{display:flex;align-items:center;gap:6px;font-size:13px}
+    .sw{width:16px;height:16px;border-radius:4px}
+    .controls{display:flex;gap:8px;justify-content:center;margin-top:14px}
+    button{padding:8px 12px;border-radius:8px;border:1px solid rgba(2,6,23,.06);background:white;cursor:pointer}
+    @media (prefers-color-scheme:dark){:root{--bg:#071126;--card:#08233a;color:#e6eef8}}
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Générateur de code">
+    <h1>Code temporaire (6 chiffres uniques)</h1>
+    <div class="otp" id="otp" aria-live="polite"></div>
+
+    <div class="meta">
+      <div class="timer" aria-hidden="false">
+        <div class="small">Temps restant</div>
+        <div id="countdown" style="font-weight:700">30s</div>
+      </div>
+      <div>
+        <div class="small">Progression</div>
+        <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
+      </div>
+    </div>
+
+    <div class="legend" id="legend" aria-hidden="false"></div>
+
+    <div class="controls">
+      <button id="regen">Régénérer maintenant</button>
+      <button id="pause">Pause</button>
+    </div>
+  </div>
+
+  <script>
+    // couleurs par position (index 0..5)
+    const colors = ['#1e40af','#059669','#d97706','#b91c1c','#0ea5a4','#7c3aed'];
+    const shapes = ['●','◆','▲','■','✦','✺']; // cue non-color
+
+    const otpEl = document.getElementById('otp');
+    const legendEl = document.getElementById('legend');
+    const countdownEl = document.getElementById('countdown');
+    const barEl = document.getElementById('bar');
+    const regenBtn = document.getElementById('regen');
+    const pauseBtn = document.getElementById('pause');
+
+    let seconds = 30;
+    let running = true;
+    let tickTimer = null;
+
+    function uniqueSix(){
+      const pool = [...Array(10).keys()]; // 0..9
+      // Fisher-Yates shuffle
+      for(let i=pool.length-1;i>0;i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [pool[i],pool[j]] = [pool[j],pool[i]];
+      }
+      return pool.slice(0,6);
+    }
+
+    function renderCode(digits){
+      otpEl.innerHTML='';
+      digits.forEach((d,i)=>{
+        const s = document.createElement('div');
+        s.className='digit';
+        s.style.background = colors[i%colors.length];
+        s.setAttribute('data-pos', i+1);
+        s.setAttribute('aria-label', `chiffre ${i+1}: ${d}`);
+        s.textContent = d;
+        otpEl.appendChild(s);
+      });
+
+      // legend
+      legendEl.innerHTML='';
+      digits.forEach((_,i)=>{
+        const item = document.createElement('div');
+        item.className='item';
+        const sw = document.createElement('span');
+        sw.className='sw';
+        sw.style.background = colors[i%colors.length];
+        sw.style.display='inline-block';
+        sw.style.borderRadius='4px';
+        const label = document.createElement('span');
+        label.textContent = `Position ${i+1}`;
+        item.appendChild(sw);
+        item.appendChild(label);
+        legendEl.appendChild(item);
+      });
+    }
+
+    function startCycle(){
+      seconds = 30;
+      running = true;
+      if(tickTimer) clearInterval(tickTimer);
+      tickTimer = setInterval(()=>{
+        if(!running) return;
+        seconds -= 1;
+        updateTimer();
+        if(seconds<=0){
+          generateAndRender();
+          seconds = 30;
+        }
+      },1000);
+    }
+
+    function updateTimer(){
+      countdownEl.textContent = seconds + 's';
+      const pct = ((30-seconds)/30)*100;
+      barEl.style.width = pct + '%';
+    }
+
+    function generateAndRender(){
+      const digits = uniqueSix();
+      renderCode(digits);
+      seconds = 30;
+      updateTimer();
+    }
+
+    regenBtn.addEventListener('click', ()=>{generateAndRender();});
+    pauseBtn.addEventListener('click', ()=>{
+      running = !running;
+      pauseBtn.textContent = running ? 'Pause' : 'Reprendre';
+    });
+
+    // init
+    generateAndRender();
+    startCycle();
+
+    // accessibility: allow space to pause
+    document.addEventListener('keydown', (e)=>{
+      if(e.code==='Space'){
+        e.preventDefault();
+        running = !running; pauseBtn.textContent = running ? 'Pause' : 'Reprendre';
+      }
+    });
+  </script>
+</body>
+</html>

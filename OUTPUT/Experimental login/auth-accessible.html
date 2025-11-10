@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Authenticator — accessible mock</title>
+  <style>
+    :root{--bg:#f4f8ff; --card:#fff; --muted:#0f2b44; --accent:#2b6cb0; --warn:#ff8a1f; --ok:#2ecc71; --shadow:0 10px 30px rgba(16,34,54,.08)}
+    .dark{--bg:#081422; --card:#071426; --muted:#cfe9ff; --accent:#4da3ff; --warn:#ff9a4d; --ok:#66d07a; --shadow:0 10px 30px rgba(0,0,0,.6)}
+
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--muted);background:linear-gradient(180deg,var(--bg),#e9f4ff);}
+    .wrap{max-width:980px;margin:36px auto;padding:18px}
+    header{display:flex;align-items:center;gap:12px}
+    h1{margin:0;font-size:20px}
+    .controls{margin-left:auto;display:flex;gap:8px;align-items:center}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
+    .row{display:flex;gap:12px;align-items:center}
+    .muted{color:#6f8aa6}
+
+    .toggles{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    label.switch{display:flex;gap:8px;align-items:center;background:var(--card);padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,.04)}
+
+    .otp-area{display:flex;flex-direction:column;gap:12px;margin-top:18px;align-items:center}
+    .visual{display:flex;gap:10px;align-items:center}
+    .digit{width:64px;height:80px;border-radius:10px;background:#f7fbff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:var(--muted);border:1px solid rgba(0,0,0,.04)}
+
+    .digit.color{background:linear-gradient(180deg,#e6f1ff,#d1e8ff);color:var(--accent)}
+    .digit.expiring{background:linear-gradient(180deg,#ffedd6,#ffdfbf);color:var(--warn)}
+    .digit.entered{background:linear-gradient(180deg,#e6fff0,#d6ffe6);color:var(--ok)}
+
+    .rotor{display:flex;gap:6px}
+    .rotor .slot{width:48px;height:56px;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .rotor .slot button{background:transparent;border:none;font-size:20px;cursor:pointer;color:var(--muted)}
+
+    .input-row{display:flex;gap:8px;align-items:center}
+    input[type="text"].otp-input{font-size:24px;padding:8px;border-radius:8px;border:1px solid #ddd;min-width:220px}
+
+    .timer{font-weight:700}
+    .status{margin-top:8px}
+
+    .small{font-size:13px;color:var(--muted)}
+
+    .actions{display:flex;gap:8px;margin-top:12px}
+
+    @media (max-width:720px){.visual{flex-wrap:wrap}.digit{width:48px;height:64px;font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Authenticator — accessible mock</h1>
+      <div class="controls">
+        <label class="small muted">Dark</label>
+        <input type="checkbox" id="darkToggle" />
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="small muted">Mode</div>
+          <strong id="modeLabel">Standard OTP</strong>
+        </div>
+        <div style="margin-left:auto">
+          <button id="recvBtn" class="btn">Simulate receive OTP</button>
+          <button id="clearBtn" class="btn" style="margin-left:8px;background:#ddd;color:#071426">Clear</button>
+        </div>
+      </div>
+
+      <div class="toggles">
+        <label class="switch"><input type="checkbox" id="colorDigits" /> <span class="small">Color-code digits</span></label>
+        <label class="switch"><input type="checkbox" id="highContrast" /> <span class="small">High contrast</span></label>
+        <label class="switch"><input type="checkbox" id="dyslexiaMode" /> <span class="small">Dyslexia mode (spaced, larger)</span></label>
+        <label class="switch"><input type="checkbox" id="showRotor" /> <span class="small">Enable rotor input</span></label>
+      </div>
+
+      <div class="otp-area">
+        <div class="visual" id="visualDigits" aria-hidden="true">
+          <!-- digits rendered here -->
+        </div>
+
+        <div class="input-row" id="inputRow">
+          <input class="otp-input" id="typedInput" placeholder="Type OTP here" inputmode="numeric" maxlength="6" />
+          <div class="timer" id="timer">—</div>
+        </div>
+
+        <div class="rotor" id="rotorArea" style="display:none">
+          <!-- rotors for each digit -->
+        </div>
+
+        <div class="status" id="statusText"></div>
+
+        <div class="actions">
+          <button id="verifyBtn" class="btn">Verify</button>
+          <button id="copyBtn" class="btn" style="background:#e6eefc;color:var(--accent)">Copy code</button>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:10px">This mock demonstrates accessibility options for OTP entry: color coding, high contrast, dyslexia-friendly spacing, and rotor-style entry. All settings persist locally.</p>
+    </div>
+  </div>
+
+  <script>
+    // Keys and storage
+    const SETTINGS_KEY = 'authAccessible.settings.v1';
+
+    // State
+    let otp = null; // current expected code
+    let expiry = null; // timestamp (ms)
+    let timerInterval = null;
+
+    // DOM
+    const visualDigits = document.getElementById('visualDigits');
+    const typedInput = document.getElementById('typedInput');
+    const timerEl = document.getElementById('timer');
+    const statusText = document.getElementById('statusText');
+    const recvBtn = document.getElementById('recvBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const verifyBtn = document.getElementById('verifyBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const colorDigits = document.getElementById('colorDigits');
+    const highContrast = document.getElementById('highContrast');
+    const dyslexiaMode = document.getElementById('dyslexiaMode');
+    const showRotor = document.getElementById('showRotor');
+    const rotorArea = document.getElementById('rotorArea');
+    const darkToggle = document.getElementById('darkToggle');
+    const modeLabel = document.getElementById('modeLabel');
+
+    // load settings
+    function loadSettings(){
+      try{
+        const raw = localStorage.getItem(SETTINGS_KEY);
+        if (raw){ const s = JSON.parse(raw); colorDigits.checked = s.colorDigits; highContrast.checked = s.highContrast; dyslexiaMode.checked = s.dyslexiaMode; showRotor.checked = s.showRotor; darkToggle.checked = s.dark; applyTheme(); }
+      }catch(e){ console.error(e); }
+    }
+    function saveSettings(){
+      const s = {colorDigits:colorDigits.checked, highContrast:highContrast.checked, dyslexiaMode:dyslexiaMode.checked, showRotor:showRotor.checked, dark:darkToggle.checked};
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+    }
+
+    function applyTheme(){
+      if (darkToggle.checked) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark');
+      if (highContrast.checked) document.documentElement.style.setProperty('--accent','#0066cc'); else document.documentElement.style.removeProperty('--accent');
+      saveSettings(); renderVisual();
+    }
+
+    // generate OTP
+    function genOTP(len=6){ let s=''; for(let i=0;i<len;i++) s += Math.floor(Math.random()*10); return s; }
+
+    function receiveOTP(){
+      otp = genOTP(6);
+      expiry = Date.now() + 30000; // 30s
+      typedInput.value = '';
+      statusText.textContent = 'OTP received';
+      modeLabel.textContent = 'One-Time Code (simulated)';
+      renderVisual();
+      startTimer();
+    }
+
+    function clearOTP(){ otp=null; expiry=null; typedInput.value=''; statusText.textContent=''; stopTimer(); renderVisual(); }
+
+    function startTimer(){ stopTimer(); updateTimer(); timerInterval = setInterval(updateTimer,250); }
+    function stopTimer(){ if(timerInterval) { clearInterval(timerInterval); timerInterval = null; } timerEl.textContent = '—'; }
+
+    function updateTimer(){ if(!expiry){ timerEl.textContent='—'; return;} const remain = Math.max(0, Math.ceil((expiry - Date.now())/1000)); timerEl.textContent = remain + 's'; // styling
+      // expire
+      if (Date.now() >= expiry){ clearOTP(); statusText.textContent = 'Code expired'; }
+      // show expiring style on visual
+      renderVisual(); }
+
+    // Render digits visual
+    function renderVisual(){
+      visualDigits.innerHTML = '';
+      const code = otp || '------';
+      for(let i=0;i<6;i++){
+        const ch = code[i] || '-';
+        const el = document.createElement('div'); el.className='digit';
+        if (colorDigits.checked) el.classList.add('color');
+        if (otp && expiry && Date.now() > expiry - 8000) el.classList.add('expiring');
+        // if user typed partial, mark entered
+        const typed = typedInput.value || '';
+        if (typed[i]) el.classList.add('entered');
+        el.textContent = typed[i] || (otp? (otp[i] || '-') : '-');
+        if (dyslexiaMode.checked) { el.style.letterSpacing = '4px'; el.style.fontSize = '26px'; }
+        visualDigits.appendChild(el);
+      }
+      // rotor
+      rotorArea.innerHTML = '';
+      if (showRotor.checked){
+        for(let i=0;i<6;i++){
+          const slot = document.createElement('div'); slot.className='slot';
+          const up = document.createElement('button'); up.textContent='▲';
+          const down = document.createElement('button'); down.textContent='▼';
+          const v = document.createElement('div'); v.textContent = (typedInput.value && typedInput.value[i]) ? typedInput.value[i] : (otp? otp[i] : '0'); v.style.fontSize='20px'; v.style.fontWeight='700';
+          up.addEventListener('click', ()=>{ rotateDigit(i,1); });
+          down.addEventListener('click', ()=>{ rotateDigit(i,-1); });
+          slot.appendChild(up); slot.appendChild(v); slot.appendChild(down);
+          rotorArea.appendChild(slot);
+        }
+        rotorArea.style.display='flex';
+      } else { rotorArea.style.display='none'; }
+    }
+
+    function rotateDigit(index,delta){
+      const cur = typedInput.value.split('');
+      while(cur.length<6) cur.push('');
+      const curVal = parseInt(cur[index]|| (otp? otp[index] : '0') ,10) || 0;
+      let next = (curVal + delta + 10) % 10;
+      cur[index] = String(next);
+      typedInput.value = cur.join('').replace(/\s+$/,'');
+      // keep max 6 chars
+      typedInput.value = typedInput.value.slice(0,6);
+      renderVisual();
+    }
+
+    // verify
+    function verify(){ if(!otp){ statusText.textContent='No active code'; return; } const entered = (typedInput.value || '').padEnd(6,' ').slice(0,6); if (entered.trim().length < 1){ statusText.textContent='Enter the code'; return; }
+      if (entered === otp){ statusText.textContent = 'Success — code matches'; statusText.style.color = 'var(--ok)'; clearOTP(); }
+      else { statusText.textContent = 'Incorrect code'; statusText.style.color = 'var(--warn)'; }
+    }
+
+    // copy
+    function copyCode(){ if(!otp){ alert('No code to copy'); return; } navigator.clipboard?.writeText(otp).then(()=>alert('Copied (simulated)')); }
+
+    // events
+    recvBtn.addEventListener('click', receiveOTP);
+    clearBtn.addEventListener('click', clearOTP);
+    verifyBtn.addEventListener('click', verify);
+    copyBtn.addEventListener('click', copyCode);
+
+    colorDigits.addEventListener('change', ()=>{ saveSettings(); renderVisual(); });
+    highContrast.addEventListener('change', ()=>{ applyTheme(); });
+    dyslexiaMode.addEventListener('change', ()=>{ saveSettings(); renderVisual(); });
+    showRotor.addEventListener('change', ()=>{ saveSettings(); renderVisual(); });
+    darkToggle.addEventListener('change', ()=>{ applyTheme(); });
+
+    typedInput.addEventListener('input', ()=>{ // limit
+      typedInput.value = typedInput.value.replace(/[^0-9]/g,'').slice(0,6); renderVisual();
+    });
+
+    // init
+    loadSettings(); renderVisual();
+
+    // small accessibility: keyboard focus on input when code received
+    function focusInput(){ typedInput.focus(); }
+    recvBtn.addEventListener('click', ()=> setTimeout(focusInput,200));
+
+    // persist on unload
+    window.addEventListener('beforeunload', ()=> saveSettings());
+
+    // expose for dev
+    window._authAccessible = {receiveOTP,clearOTP,verify,renderVisual};
+  </script>
+</body>
+</html>

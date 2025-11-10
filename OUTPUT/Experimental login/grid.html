@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>25×25 Grid — click to paint</title>
+  <style>
+    :root{--cell-size:16px;--gap:2px}
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;background:#f3f3f3;margin:0;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:28px}
+    .panel{background:#fff;border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);width:760px}
+    h1{margin:0 0 8px 0;font-size:16px}
+    .controls{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+    .btn{background:#ffb74d;border:none;padding:8px 10px;border-radius:8px;color:#fff;cursor:pointer}
+    .btn.ghost{background:#eee;color:#333}
+    .note{color:#666;font-size:13px}
+
+    .grid-wrap{background:#fff;padding:12px;border-radius:8px;border:1px solid #eee}
+  .grid{display:grid;grid-template-columns:repeat(25,var(--cell-size));grid-auto-rows:var(--cell-size);gap:var(--gap);width:calc(25 * var(--cell-size) + 24 * var(--gap));}
+    .cell{width:var(--cell-size);height:var(--cell-size);background:white;border:1px solid #e6e6e6;box-sizing:border-box;cursor:pointer}
+    .cell.black{background:black;border-color:#111}
+
+    .footer{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+  </style>
+</head>
+<body>
+  <div class="panel">
+  <h1>25×25 Grid — click to paint</h1>
+    <div class="controls">
+      <button class="btn" id="clearBtn">Clear (all white)</button>
+      <button class="btn" id="fillBtn">Fill (all black)</button>
+      <button class="btn ghost" id="exportBtn">Export PNG (opens in new tab)</button>
+      <div style="margin-left:auto" class="note">Single click: paint black / toggle. Double-click: set white (clear cell).</div>
+    </div>
+
+    <div class="grid-wrap">
+      <div id="grid" class="grid" aria-label="drawable grid"></div>
+    </div>
+
+    <div class="footer">
+      <div class="note">Click individual squares to toggle color. Double-click clears a square.</div>
+      <div class="note">Grid: 25 × 25</div>
+    </div>
+  </div>
+
+  <script>
+  // Configuration
+  const COLS = 25;
+  const ROWS = 25;
+
+    const gridEl = document.getElementById('grid');
+    const clearBtn = document.getElementById('clearBtn');
+    const fillBtn = document.getElementById('fillBtn');
+    const exportBtn = document.getElementById('exportBtn');
+
+    // Create grid cells
+    function createGrid(cols, rows){
+      gridEl.innerHTML = '';
+      // set CSS grid template dynamically in case we change size later
+      gridEl.style.gridTemplateColumns = `repeat(${cols}, var(--cell-size))`;
+      for (let i = 0; i < cols * rows; i++){
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        cell.tabIndex = 0; // make focusable for keyboard
+        cell.dataset.index = i;
+
+        // We'll implement click vs dblclick handling using a small timeout so they don't conflict
+        let clickTimer = null;
+        const CLICK_DELAY = 250; // ms
+
+        cell.addEventListener('click', (e)=>{
+          // schedule single-click action
+          if (clickTimer) clearTimeout(clickTimer);
+          clickTimer = setTimeout(()=>{
+            // single click action: toggle black
+            if (cell.classList.contains('black')){
+              cell.classList.remove('black');
+            } else {
+              cell.classList.add('black');
+            }
+            clickTimer = null;
+          }, CLICK_DELAY);
+        });
+
+        cell.addEventListener('dblclick', (e)=>{
+          // double-click should cancel pending single-click action and perform double action
+          if (clickTimer) { clearTimeout(clickTimer); clickTimer = null; }
+          // double-click action: set to white (clear)
+          cell.classList.remove('black');
+        });
+
+        // keyboard support: Space toggles, Enter clears
+        cell.addEventListener('keydown', (ev)=>{
+          if (ev.key === ' '){ ev.preventDefault(); // toggle
+            if (cell.classList.contains('black')) cell.classList.remove('black'); else cell.classList.add('black');
+          } else if (ev.key === 'Enter'){
+            cell.classList.remove('black');
+          }
+        });
+
+        gridEl.appendChild(cell);
+      }
+    }
+
+    createGrid(COLS, ROWS);
+
+    // Controls
+    clearBtn.addEventListener('click', ()=>{
+      document.querySelectorAll('#grid .cell.black').forEach(c=>c.classList.remove('black'));
+    });
+    fillBtn.addEventListener('click', ()=>{
+      document.querySelectorAll('#grid .cell:not(.black)').forEach(c=>c.classList.add('black'));
+    });
+
+    // Export PNG: draw to canvas
+    exportBtn.addEventListener('click', ()=>{
+      // compute pixel size: use cell size in CSS
+      const style = getComputedStyle(document.documentElement);
+      const cellSize = parseFloat(style.getPropertyValue('--cell-size')) || 16;
+      const gap = parseFloat(style.getPropertyValue('--gap')) || 2;
+
+      const width = COLS;
+      const height = ROWS;
+      const scale = 8; // upscale each cell to 8x for visibility
+
+      const canvas = document.createElement('canvas');
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      const ctx = canvas.getContext('2d');
+
+      // white background
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+
+      const cells = Array.from(document.querySelectorAll('#grid .cell'));
+      for (let r = 0; r < height; r++){
+        for (let c = 0; c < width; c++){
+          const idx = r * width + c;
+          const cell = cells[idx];
+          if (cell && cell.classList.contains('black')){
+            ctx.fillStyle = '#000';
+            ctx.fillRect(c*scale, r*scale, scale, scale);
+          }
+        }
+      }
+
+      const dataUrl = canvas.toDataURL('image/png');
+      window.open(dataUrl, '_blank');
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+(Transcribed by TurboScribe.ai. Go Unlimited to remove this message.)
+
+Confirm that this is your device, confirm that this is like your data, but they can confirm that this is you, in a way. Yeah, but all of that is possible because the tax department at least knows where you live, so they know where to send that letter with that specific information, right? So, on a basis, they do know information about you that they can use to trace you. But the thing that they use to trace me, I mean, the fact is they have to, but they trace me physically.
+
+What we're talking about is not necessarily tracing, we're talking about the connection between the physical presence and the visual presence, no? And how those two are connected because of the login experience, no? Yeah. So in that respect, I don't think it matters if the tax department can trace me back because that's the point, it needs to trace me back, you know? But I don't think it is necessary for a platform like Facebook or for, I would say, Uber Eats or things of that nature to be able to confirm that it is really me and to have 2FA and things of that nature, you know? Well, then it becomes more of a matter of semantics, I suppose, that if there was a reason why it would be in public good for them to be able to do that, then it would suddenly be okay. Like, now it's just a matter of, is there some justification to allow that kind of tracking? And as long as that justification can be made, then yeah.
+
+And that's what we're, I think, seeing in a way is, you know, we get this justification like, oh, well, we got to combat bad content, you know? Terrible illegal content like piracy or, you know, child pornography. And suddenly there's this justification to allow these big platforms to trace you. You know, like in the UK where now you have to log in with your actual state-issued ID.
+
+Yeah. So that to me is kind of like at least a slippery slope where if there needs to be some kind of justification to allow these kind of undesirable breaches of our own privacy, well, the justification can always be made up. And so I do feel a little bit conflicted.
+
+Yeah, I have to allow this sort of stuff for my workers' tax department because there's a clear justification for it. Yeah, we needed to file our taxes. But, you know, that kind of justification, that goalpost can always be shifted.
+
+So ideally, it wouldn't be possible, I suppose, but that would be impractical. There's always that balance between what is practical and what is, you know, ideal, what's morally permittable, I suppose. And that balance can always be disrupted, can always be shifted one way or another and be abused in that way.
+
+That I do consider to be a bit scary. Use or like what the fuck am I talking about in a way? But you're referring back to feelings and like you're confirming thoughts and philosophies I've been writing about in the memoir. So this is good to hear.
+
+There was also a question I asked. First of all, do you use the password? Manager? Yeah, I do. Do you find that to be sort of optimal, like useful? Yes, with an asterisk.
+
+Okay, what is the asterisk about? Well, to use like a convenient, like with what I just said about the juxtaposition between like what is practical and what is moral and finding the balance between that. Likewise, I think with a lot of login and different login methods, there's this balance between what is convenient versus what is secure, I suppose. And the password manager to me, depending on the password manager, hits that very fine balance between it's very convenient because I just need one password to get access to all my systems and just takes me an extra couple of clicks to fill in the correct password for the correct login page.
+
+And it's reasonably secure because it just means I have one password I need to remember and that can be a really long, really good password. So that one would be harder to crack. And if for some reason that password would fail, I can always change it instead of having to change hundreds of passwords, I suppose.
+
+Obviously, yeah, and kind of the asterisk is there that it does require you to have a password manager that you're probably dependent on some outside party. And you would have to trust that party to not, or one, to not abuse your trust in the password manager, to not abuse the pricing and such, to keep draining you dry and obviously to actually be properly secure. You know, nothing truly is, but at the very least, you don't want to read in the newspaper that your password manager got hacked by hackers or something, got entirely leaked.
+
+I was just thinking, what happens to your passwords if you access your account if you choose to not use it, for example, anymore? What do you do? This is sort of a question because I'm curious, actually. You mean passwords for old accounts? If you don't want to use a password manager. If I want to stop using my password manager, I probably have to, one way or another, export all of the passwords stored in there to somewhere else.
+
+I mean, worst case, I'll just have to by hand copy everything out and put it in some other place. Pretty much all the passwords I have stored in there are all some random hashes, so it's not like I'm going to be able to remember them myself. So in that sense, I am locked into some password manager system now, unless I manually change all the passwords to something else, which would be the other option.
+
+Go ahead. So I wouldn't necessarily say you are stuck in the system, because you can always copy your passwords to another manager, or you can manually go to all the websites you've stored in there and change your password to something you do know, and then you'd be free again. But that would be less secure.
+
+So I do think having a good and trusted password manager might be the ideal situation between convenient and secure. Yes. This is me, I'm doing a parenthesis. 
+
+I have like, I don't know if people like it, if people like this antivirus thing. I don't know. But it saved my computer when I was downloading this query. 
+
+It was CasperC. And it has like a password manager, but I have yet to use it. Should I? What do I do? So my approach to things like password managers and that is to look up online communities for that sort of stuff and see what they recommend.
+
+That's how I got mine. And I used like some community on Reddit or something that had like some recommendations. And I kind of checked those and saw kind of the justifications they had.
+
+So that, that to me was important to seeing like how is it peer reviewed, I suppose. And what are the arguments for or against this or others. I did the same thing with the VPN that I have.
+
+My thesis is about creating better relationships between users and platforms. Aside from the, you know, ethical aspects of it, there's also the tech literacy aspects of things or perhaps like the more direct relationship aspects of it. How do you get users to be more informed on how to be secure or how to better manage your account? There's an aspect of tech literacy that needs to be pushed in front.
+
+For example, somebody that you don't know who's named Emma mentioned that there really was the aspect of like what happens to my account when I lose. For example, if I lose my phone, what happens to how do I get back to my accounts? She mentioned that if she wasn't like tech, if she wasn't like more tech savvy, she would have really struggled to get her accounts back. And she thought like this might tip off like advancing technologies for security really might tip off people.
+
+So how do you face that aspect of tech literacy? Or is it like a constant issue that you face? That's a good question. No, not really. In general or? I think there's definitely like a big gap on knowing what the best tracks are.
+
+Like, I think the vast majority of people don't use a password manager and just have like one or two passwords or variants of one or two passwords that they use for everything, which is really bad, honestly. And that obviously can be ascribed to a lack of understanding what are the best practices. And having never really been informed that and like, I think most people kind of know that you're not supposed to use just one or two passwords.
+
+But most people probably don't know like what the ideal length of a password is for it to be really secure and how that how the security of your password can change based on the length and what kind of characters you use for it and stuff. So having basic understanding of those concepts, I think can already push people towards more security and just understanding that this is what is recommended you do. And here are some viable options.
+
+So I guess kind of like the ideal scenario would be to just be able to give people. I guess like this is the information you need. These are the options you could have.
+
+Go do something with like that sort of information. Yes, that is a little bit. I mean, it probably that website just uses like your like just computes it in your browser, so it wouldn't be insecure.
+
+But yeah, that is a little bit silly. That's like, you know, say somebody in like a game saying like, oh, if you type your password, it will be censored out and then somebody actually typing out the password. But yeah, no, there are ways to have people because because of that I was a little bit more informed on how to make my passwords, like stronger in a sense.
+
+There's also somebody that said something interesting. They said, like, it's hard to change. Like to find a good password that is.
+
+Good, because part of the passwords that you have, like. They're part of you and they change with you in a way. Emotionally, for me, I had like a specific.
+
+For example, if I can talk about like specific experiences I've had with passwords. I had one specific password that was I'm going to mention it to you, but it's. I changed it by then, it's probably not going to.
+
+And also changing my password, not never going to guess what my password is now. But. Like.
+
+My little brother, a long time ago. Found my password that I used to connect and talk to my friends online. And.
+
+To get on my account and pretend that he was me. And talk to my friends in my stead and just be like an asshole to them. And I was like super hurt that he said that, that he did that.
+
+And I was laughing it off whenever. I was so hurt, actually, that I changed my password and my password was literally very edgy. I was like, I'm hurt.
+
+It wasn't it wasn't necessarily this, but it was like, I'm hurt, whatever. And for the longest time, I use that password to say, like, I'm hurt. And that password itself.
+
+Cemented a feeling and a relationship that I have with my brother and a memory. You know what I mean? I was thinking, is it possible that the passwords that you use. You know, can relate you back to a memory and then like.
+
+Concentrate that feeling and that memory and cemented in your day to day basis. Is there another sort of additional aspect that can be connected to the act of. You know.
+
+Connecting a memory to a password and constantly being brought back to it. You know, and then that feeling being used. Into the logging process that we go into the logging process already feeling some type of way.
+
+So, like, that is an interesting thought. How much of a password can dictate. Who, like, how you feel within the logging experience.
+
+Does that make sense? Do you have, like, similar experiences? My question. You can just say yes or no. I. No, in the sense that I've not.
+
+I've not come up with a password. And there is specific. Specific things, but I do like a lot of my old passwords were like reflections of.
+
+Things that I was interested in or was really into at the time. And in that sense, they are kind of like a little bit of a reflection of who I was. And especially like as I got older.
+
+Gained new interest, but also gained more understanding of secure passwords and such. You know, my passwords evolved from there as well in complexity, scale and their topics as well. And in that sense, I do think it's it would be interesting to like.
+
+If you took all the passwords you used from the very start to now. They would plot out a chart of, I guess, how you sort of change over time. In that sense, you know, your passwords are a little bit of a reflection of who you are.
+
+Which makes sense because like they are ultimately meant to prove your identity. As something that intrinsically only you should know. And so it's not that far fetched that a lot of passwords are little bits of reflections of you as stuff that only you would know.
+
+(Transcribed by TurboScribe.ai. Go Unlimited to remove this message.)

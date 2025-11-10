@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entrée — Dial rotatif (rotor)</title>
+  <style>
+    :root{--bg:#fafbff;--fg:#081124}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);display:flex;min-height:100vh;align-items:center;justify-content:center;color:var(--fg)}
+    .wrap{background:white;padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,.06);width:640px;max-width:96%}
+    h1{margin:0 0 10px;font-size:18px}
+    .layout{display:flex;gap:20px;align-items:center}
+    .dial{width:300px;height:300px;position:relative;border-radius:50%;background:linear-gradient(180deg,#e6eefc,#ffffff);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 -6px 16px rgba(2,6,23,.03)}
+    .center{width:120px;height:120px;background:#0f172a;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-direction:column}
+    .digits{position:absolute;inset:0;border-radius:50%;pointer-events:none}
+    .digitBtn{position:absolute;transform-origin:center center;pointer-events:auto;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid rgba(2,6,23,.06);cursor:pointer;font-weight:700}
+    .actions{display:flex;flex-direction:column;gap:8px}
+    .display{font-size:20px;padding:8px 12px;background:#f1f5f9;border-radius:8px;border:1px solid rgba(2,6,23,.04);min-width:220px}
+    .kbdHint{font-size:13px;color:#6b7280}
+    button{padding:8px 10px;border-radius:8px;border:1px solid rgba(2,6,23,.06);background:white;cursor:pointer}
+    .controls{display:flex;gap:8px;margin-top:10px}
+    .animRotate{transition:transform .5s cubic-bezier(.2,.9,.2,1)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Entrée du code — style dial rotatif</h1>
+    <div class="layout">
+      <div class="dial" id="dial" aria-hidden="false" role="application" aria-label="Clavier rotatif">
+        <div class="digits" id="digits"></div>
+        <div class="center" id="center">Entrée<br><span id="codeDisplay">••••••</span></div>
+      </div>
+
+      <div class="actions">
+        <div class="display" id="typed" aria-live="polite">Code: <strong id="typedVal"></strong></div>
+        <div class="kbdHint">Cliquez un chiffre sur le cadran ou tapez 0-9. Le chiffre s'ajoute séquentiellement.</div>
+        <div class="controls">
+          <button id="back">← Effacer</button>
+          <button id="clear">Effacer tout</button>
+          <button id="submit">Valider</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const dial = document.getElementById('dial');
+    const digitsEl = document.getElementById('digits');
+    const typedVal = document.getElementById('typedVal');
+    const codeDisplay = document.getElementById('codeDisplay');
+
+    let code = '';
+    const maxLen = 6;
+
+    // place digits 1..0 (standard telephone: 1 at top-left? We'll arrange 1..0 around)
+    const labels = ['1','2','3','4','5','6','7','8','9','0'];
+
+    function placeButtons(){
+      const r = 120; // radius in px from center
+      const cx = 150, cy = 150; // dial center
+      const n = labels.length;
+
+      labels.forEach((lbl,i)=>{
+        const angle = (i/n)*Math.PI*2 - Math.PI/2; // start at top
+        const x = cx + Math.cos(angle)*r - 30; // offset by half button size
+        const y = cy + Math.sin(angle)*r - 30;
+        const btn = document.createElement('button');
+        btn.className='digitBtn animRotate';
+        btn.style.left = x + 'px';
+        btn.style.top = y + 'px';
+        btn.style.position = 'absolute';
+        btn.setAttribute('data-val', lbl);
+        btn.setAttribute('aria-label', 'Chiffre ' + lbl);
+        btn.textContent = lbl;
+        btn.addEventListener('click', ()=>{selectDigit(lbl, i);});
+        digitsEl.appendChild(btn);
+      });
+    }
+
+    function selectDigit(lbl, index){
+      // animate slight rotation of the whole dial to the clicked position
+      const deg = (index/labels.length)*360;
+      dial.style.transform = `rotate(${deg}deg)`;
+      // after animation, rotate back slightly for tactile feel
+      setTimeout(()=>{dial.style.transform = 'rotate(0deg)';},500);
+
+      appendDigit(lbl);
+    }
+
+    function appendDigit(d){
+      if(code.length >= maxLen) return;
+      code += d;
+      renderCode();
+    }
+
+    function backspace(){ code = code.slice(0,-1); renderCode(); }
+    function clearAll(){ code = ''; renderCode(); }
+
+    function renderCode(){
+      typedVal.textContent = code;
+      // update center masked display
+      const masked = code.split('').map(c=>c).concat(Array(maxLen-code.length).fill('•'));
+      codeDisplay.textContent = masked.join(' ');
+    }
+
+    document.getElementById('back').addEventListener('click', backspace);
+    document.getElementById('clear').addEventListener('click', clearAll);
+    document.getElementById('submit').addEventListener('click', ()=>{
+      if(code.length<1){alert('Aucun chiffre saisi');return}
+      alert('Code soumis: ' + code);
+      // simulate reset after submit
+      clearAll();
+    });
+
+    // keyboard support
+    document.addEventListener('keydown', (e)=>{
+      if(e.key>= '0' && e.key <= '9'){
+        appendDigit(e.key);
+      } else if(e.key === 'Backspace'){
+        backspace();
+      } else if(e.key === 'Escape'){
+        clearAll();
+      } else if(e.key === 'Enter'){
+        document.getElementById('submit').click();
+      }
+    });
+
+    // init
+    placeButtons();
+    renderCode();
+  </script>
+</body>
+</html>
