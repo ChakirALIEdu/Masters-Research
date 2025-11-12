@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Methods</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/patterns.css" />
+</head>
+<body>
+    <div class="login-methods">
+        <h2>Select Login Method</h2>
+        <div class="method-option">
+            <label for="patternLogin">
+                <input type="radio" id="patternLogin" name="loginMethod" value="pattern" checked />
+                Trace a Pattern
+            </label>
+        </div>
+        <div class="method-option">
+            <label for="traditionalLogin">
+                <input type="radio" id="traditionalLogin" name="loginMethod" value="traditional" />
+                Traditional Login (Username/Password)
+            </label>
+        </div>
+        <button id="continueBtn" class="btn">Continue</button>
+    </div>
+
+    <div id="vigilanceOverlay" class="vigilance-overlay" style="display:none;">
+        <h2>Vigilance Mode Activated</h2>
+        <p>Please trace the pattern to proceed.</p>
+        <canvas id="patternCanvas" width="300" height="300"></canvas>
+        <button id="confirmPattern" class="btn">Confirm Pattern</button>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/patternTracer.js"></script>
+    <script src="../js/vigilanceMode.js"></script>
+</body>
+</html>

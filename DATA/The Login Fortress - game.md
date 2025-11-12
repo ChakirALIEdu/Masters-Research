@@ -2,19 +2,25 @@
 
 A short card game that exemplifies login rituals, their suspicion, and the relations they bring.
 
-Components
-> Login Cards with pre-written rituals (blue or magenta backs)
+___
+
+## Components
+> Login Cards with pre-written rituals (blue or orange)
 > Blank Cards for creating new rituals
 > One envelope containing a “treasure”
 > One Game Master who verifies rituals and observes play
 
-Setup
+___
+
+## Setup
 > 3–8 players
 > Game Master verifies if login rituals are complete, checks guesses, keeps blank cards lawful, gives final envelope.
 > Deal one Login Card face-down to each player
 > Each player shows their Login Card only to the Game Master
 
-Gameplay
+_____
+
+## Gameplay
 The game is played in rounds. One round lasts a max of 4 minutes.
 
 A round ends when either:
@@ -38,6 +44,8 @@ At any time, a player may guess what is written on another player’s Login Card
 Alternatively, if all other players are eliminated, the last remaining player wins.
 The ultimate winner receives the envelope WITH THIRTEEN THOUSAND DOOLARS.
 
+___
+___
 ### Notes:
 Completed Login Cards are always public once revealed
 Blank Cards are kept secret, except to the writer, recipient and the Game Master

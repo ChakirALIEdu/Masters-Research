@@ -1,26 +1,65 @@
+ACKNOWLEDGEMENT
+
+This thesis is the culmination of a reflection that would not have been possible without the support and guidance of many folks. 
+My deepest gratitude goes to my supervisor, Joëlle Bitton, for her invaluable insights, patience, and encouragement throughout this process. I could not have been assigned a better tutor. I am profoundly thankful to all the participants and colleagues who generously shared their time and experiences for the field observations, surveys, discussions and interviews.Your stories and insights form the empirical heart of this research. 
+To my friends, especially Sander and Emma: thank you for your sincere support, for your incredible insights, and for giving me constructive criticism. 
+To my mother, Mulki ALI: thank you for supporting me throughout this entire process, and continuing to believe in me more than I believe in myself. 
+And to my cat, Kitty, who turned 18 years old this year, and who reminded me to wake up every day at 4am to start the day well. This work is yours as much as it is mine. 
+
+
 Abstract
 This thesis examines the act of logging in as a cultural and design practice that defines how people gain access, are recognized, and take part in digital systems. It approaches authentication as a site of negotiation between user and machine, drawing from interface theory, anthropology, and design history to trace its evolution from spoken countersigns and bureaucratic papers to biometric scans and corporate single sign-on systems. This trajectory reveals how login processes inherit older logics of verification and control while masking them under convenience. As authentication becomes externalized to devices and identity providers, users lose awareness of the systems that validate them. Through historical analysis, user studies and speculative prototypes, the research explores how “the login experience” could instead support user experience by making context, friction, and user participation central to the experience of recognition online.
-
-
-
 (NOTES POUR JOELLE BITTON: Je n'ai pas encore rajouter les sources et descriptions des images et il me manque quelques unes de ces dernières. Je les placerai ce weekend. 
-J'ai mis des partis entre parenthèse (FOOTNOTE par exemple) pour indiquer que je devais rajouter quelques détails à certains endroits.
 
-Il manque encore 2-3 design proposals, des images des expérimentations (je dois reprendre quelques unes...) et les sources des images et des bons footnotes.
-La mise en page se fait en parallèle avec Daniel  Sciboz, et tout se passe bien pour le moment.
 
-Le dossier est à ... 80% fini? Dans sa rédaction? Encore quelques corrections encore... On y est presque.)
+les sources des images et des bons footnotes.
 
-I kept the footnotes as well for now, to not lose some of my sources. How do I source my references and knowledge exactly again?
+faire micro typo (mise en page) durant correction
+
+finish thesis for sunday. rdv le 13 avec maquette layout mise en page etc.   
+séparer sources, 
+
+(essays webs books etc) 
+(nom, date)
+(article first name et al, date)
+ce serait bien de me referer au fait que cet objet d’étude peut paraître trivial mais en fait il y a vraiment matière et ça fait remonter 
+
+annexe sont pas obligatoires (what do we want to conserve as archives and which archives do we wanna share. not needed to put everything. what is important to conserve)
+for picture sources, table of illustrations with a list of sources for images
+image is author, what it represents,year, if it’s from book or study so name, etc, if art is who is the conservator, photo source at website, retrieved by website
+CONCLUSION --->
+une phrase qui fasse la boucle avec la motivation (place pour playful login. c’est aussi une opportunité de faire l'authentification sans l’aspect discriminatoire)
+(c’est une réflexion de la perception de l’être et la vie privée)
+
+A system is only as secure as its most frustrated user.
+
+Glossary
+Because this research moves between computing, design, and philosophy, several terms require clarification. These definitions anchor their meaning as I understand and use them throughout this thesis. They are not meant as universal truths, but as working interpretations that situate the vocabulary of this research within the cultural and technical history of login.
+Authentication, in this memoir, is the process through which a system verifies a user’s claim to identity, typically by testing a credential. It translates trust into measurable proof.
+Identification is the first act of naming oneself before a system. It signals presence (“this is me”) but not yet recognition. Identification precedes authentication, but together they form the process of entry.
+
+Login, interpreted as “Connexion” in french, is the moment of passage into a digital environment, a process by which a user enters an authentication sequence to be recognised by a platform, device, or service. For me, “login” implies relation: a first exchange between human and system, a gesture closer to connexion than to verification. It is different from the act of authentication, due to the fact that this only includes human-computer interactions. In that sense, this memoir is HCI research.
+
+The externalisation of login describes the process through which authentication leaves its native platform and becomes distributed across other infrastructures. Through authenticator apps, passkeys, Single Sign-On systems, or biometric devices, recognition migrates toward third parties who guarantee trust on the platform’s behalf. In this displacement, the act of entry becomes dependent on external institutions and technologies.
+
+Liminality refers to the state of being in-between, neither fully inside nor outside. Borrowed from anthropological theory, it marks the threshold moment when users are suspended between access and denial, self and system. Login inhabits this liminal zone, where recognition has not yet been granted but the gesture has already begun.
+
+Alienation, or aliénation, describes the user’s estrangement from the means and meanings of recognition. It appears when the ability to authenticate, and thus to appear before a system, belongs more to infrastructures that mediate on users’ behalf, than to the people being identified themselves. Alienation manifests as frustration, opacity, and doubt about ownership; the unsettling question of whether one’s account, data, or identity still belong to oneself. It is also a source of frustration.
+
+Trust, or “confiance” as I understand it in french, defines the dynamic relation of belief between user and platform. Both technical and affective, it can be engineered through interface design, reinforced through repetition, or betrayed through breach. Trust is what allows users to hand over their credentials despite knowing little of where or how they will be processed. It is, in short, the faith that the system will keep its promise.
+
+Opacity names the opposite of transparency. It describes a system whose inner workings, decisions, and data flows remain hidden from the user. Opacity in login demands belief in the system’s decisions rather than understanding, shaping interactions through secrecy. In the context of login, it is both a condition of security and a source of alienation or estrangement.
 
 
 Introduction
 
-Observe a familiar scene: a person stands before a door. They hold a key and attempt to enter: insert, turn, step through. Yet in our digital present, entry is neither simple nor singular. The key has multiplied. One key unlocks another; a code is sent elsewhere to an inbox or a phone; a fingerprint or face must confirm it; a secondary device must approve. What was once a straightforward threshold now unfolds as a distributed ritual, enacted across screens, devices, and platforms. This condition, which I call the externalisation of login, forms the first focus of this thesis.
+Observe a familiar scene: a person stands before a door. They hold a key and attempt to enter: insert, turn, step through. Yet in our digital present, entry is neither simple nor singular. The key has multiplied. One key unlocks another; a code is sent elsewhere to an inbox or a phone; a fingerprint or face must confirm it; a secondary device must approve. What was once a straightforward threshold now unfolds as a distributed practice, enacted across screens, devices, and platforms. This condition, which I call the externalisation of login, forms the first focus of this thesis.
 
 Externalisation describes how authentication has migrated away from the immediate relationship between user and platform. To access one service, users must pass through another (Google Authenticator, Microsoft, Apple, SMS verification, recovery emails, or biometric prompts). Each intermediary extends the act of recognition outward, fragmenting it across corporate infrastructures that claim to simplify while quietly centralising control. The interface no longer belongs entirely to the designer or the user; its language and gestures are dictated by standards imposed from elsewhere.
 
 This project begins with a simple question: what would the login experience look like if we designed it differently? 
+To ask this is to challenge a fundamental pillar of digital life. We are taught that frustration is the necessary price of safety, and that opacity is a feature of security. Worse yet, users remain frustrated, and are faced with countless more steps to make them “feel more secure”, and yet few of the technologies employed inform users or succeed in enhancing users’ experiences. This relegates additional login steps to another daily chore that erodes patience and, ultimately, care for security itself. Making users care for their security is a step that matters as much as making them secure.
+
 If we reconsider protection not as an obstacle but as a design condition, what remains of this act we perform daily? The answer, I propose, is that login reveals something deeper about how we are taught to appear before machines, in how we are trained to submit proof, how we internalise authority, and how we come to believe that friction equals safety.
 
 Building on Alexander Galloway’s notion of the interface as an agent of control and Arnold van Gennep’s understanding of liminality, this thesis approaches login as a designed threshold that produces both subject and system. It does not simply connect the user to the system, more so that it produces the user, the system, and the world that both inhabit. The login, from this perspective, is a miniature apparatus of governance, defining who may enter, under what terms, and through which gestures of recognition. Following Wendy Hui Kyong Chun, I treat such interfaces as ideological performances that render invisible infrastructures of power as visible acts of participation. The login is therefore a checkpoint and a daily affirmation of faith in unseen systems that promise protection.
@@ -29,8 +68,6 @@ This thesis proceeds from three claims:
 The login is a repetitive practice that anchors thoughts, feelings and behaviours in users prior to entry, and dictates part of their feelings relating to the platforms they interact with..
 The externalisation of login marks a political and aesthetic shift: trust is displaced from individual platforms toward corporate infrastructures, leading to a loss of design independence, as those external infrastructures impose a new design theme platforms struggle to clash with or implement..
 Reimagining login requires an approach that questions its inheritances and imagines other modes of authentication, perhaps some that are more interactive, playful, and that the current login models can be improved upon.
-
-
 
 From these claims emerge the guiding questions: What does login teach us about being a user in networked systems? Can login be redesigned as a moment of relation-building between user and platform? Can login have an additional layer of play added to its design?
 
@@ -42,29 +79,6 @@ My motivation for this research begins with how I, like many users, first experi
 
 
 
-
-Glossary
-Because this research moves between computing, design, and philosophy, several terms require clarification. These definitions anchor their meaning as I understand and use them throughout this thesis. They are not meant as universal truths, but as working interpretations that situate the vocabulary of this research within the cultural and technical history of login.
-Authentication, in this memoir, is the process through which a system verifies a user’s claim to identity, typically by testing a credential. It translates trust into measurable proof.
-Identification is the first act of naming oneself before a system. It signals presence (“this is me”) but not yet recognition. Identification precedes authentication, but together they form the ritual of entry.
-
-There is a part of rituality in login, indeed. The ritual of entry is a term that recognises the repetitive and formative aspects of login, that enforces ideas within users through those patterns.
-
-Login, interpreted as “Connexion” in french, is the moment of passage into a digital environment, a process by which a user enters an authentication sequence to be recognised by a platform, device, or service. For me, “login” implies relation: a first exchange between human and system, a gesture closer to connexion than to verification. It is different from the act of authentication, due to the fact that this only includes human-computer interactions. In that sense, this memoir is HCI research.
-
-The externalisation of login describes the process through which authentication leaves its native platform and becomes distributed across other infrastructures. Through authenticator apps, passkeys, Single Sign-On systems, or biometric devices, recognition migrates toward third parties who guarantee trust on the platform’s behalf. In this displacement, the ritual of entry becomes dependent on external institutions and technologies.
-
-Liminality refers to the state of being in-between, neither fully inside nor outside. Borrowed from anthropological theory, it marks the threshold moment when users are suspended between access and denial, self and system. Login inhabits this liminal zone, where recognition has not yet been granted but the gesture has already begun.
-
-Alienation, or aliénation, describes the user’s estrangement from the means and meanings of recognition. It appears when the ability to authenticate, and thus to appear before a system, belongs more to infrastructures that mediate on users’ behalf, than to the people being identified themselves. Alienation manifests as frustration, opacity, and doubt about ownership; the unsettling question of whether one’s account, data, or identity still belong to oneself. It is also a source of frustration.
-
-Trust, or “confiance” as I understand it in french, defines the dynamic relation of belief between user and platform. Both technical and affective, it can be engineered through interface design, reinforced through repetition, or betrayed through breach. Trust is what allows users to hand over their credentials despite knowing little of where or how they will be processed. It is, in short, the faith that the system will keep its promise.
-
-Opacity names the opposite of transparency. It describes a system whose inner workings, decisions, and data flows remain hidden from the user. Opacity in login demands belief in the system’s decisions rather than understanding, shaping interactions through secrecy. In the context of login, it is both a condition of security and a source of alienation or estrangement.
-
-(NOTE: I might move the glossary after the motivation, or before the introduction. your thoughts?)
-
-
 Motivation
 The act of logging in has become one of the most repeated gestures of digital life. Each day, users identify themselves before machines, providing fragments of data to gain access to the spaces where they work, play, and communicate. These small gestures define the conditions under which people are recognized by their systems. Thus, the very entry into Human-Computer Interaction perhaps begins there. This project asks how such moments might be redesigned to create new relationships between users and platforms: ones that are proportional, contextual, and humane rather than standardized (and in worse cases, extractive of data, as some users worry about).
 As two-factor authentication and verification apps appeared, access turned from invitation to obligation. CAPTCHAs crystallized this change with a phrase both banal and profound: 
@@ -72,10 +86,10 @@ As two-factor authentication and verification apps appeared, access turned from 
 
 This peculiar question hinted at a much greater problem. Is the wording correct?  It seems a bit of a big ask to prove that I am a human. Is pattern recognition truly the sole thing that defines humans? Can I really only be identified through that?
 This trivial in isolation, these questions revealed an emerging pattern. Many people seem to have experienced a fear of losing their accounts during recovery, the stress of Multi-Factor Authentication, and the struggles that come with changing and remembering passwords. For security’s sake, login needed to be complicated, and for security’s sake, human comfort was set aside. Some companies, like Google, aim for a passwordless future, pairing devices to a private key. But is getting rid of the password the sole solution? Bringing the login outside of its platform and making it dependent on devices creates more dependencies in other infrastructures. 
-
+Furthermore, this pursuit of frictionless, universal security can mask deeper issues of bias. The historical logic of using bodily metrics for identification, rooted in discriminatory practices like anthropometry, finds its echo in modern biometrics. These systems are not neutral; well-documented evidence shows they often fail on darker skin, meaning the very act of login can become a site of exclusion for some users. The command to "prove you are human" then takes on a different, more charged meaning, revealing how authentication can reinforce social hierarchies instead of merely verifying identity.
 The issue is not that security remains at the forefront, but that its language has also been universalized: one corporate “design grammar” applied to every context, from banking to gaming. Anthropology and media theory help articulate this condition.
 The notion of the threshold has long been associated with transformation. In Les Rites de Passage (1909), anthropologist Arnold van Gennep described thresholds as structured moments of transition that separate one social state from another. Victor Turner, writing in The Ritual Process (1969), expanded this idea through his concept of liminality: a temporary suspension of norms where identities are reshaped. 
-In the digital era, media theorists such as Alexander R. Galloway (The Interface Effect, 2012) and Wendy Hui Kyong Chun (Programmed Visions, 2011) (whom are great sources for me) shift this discussion from physical or social boundaries to computational ones. For Galloway, the interface is a site of protocol and control; for Chun, habitual interaction naturalizes that control into everyday behavior.
+In the digital era, media theorists such as Alexander R. Galloway (The Interface Effect, 2012) and Wendy Hui Kyong Chun (Programmed Visions, 2011) (who are great sources for me) shift this discussion from physical or social boundaries to computational ones. For Galloway, the interface is a site of protocol and control; for Chun, habitual interaction naturalizes that control into everyday behavior.
 However, my approach is as constructive as it is critical. The role of designers in authentication is critical. It is important to create new design philosophies, relations and methods for the login process. Authentication is one of the most consequential interactions we have with today’s online platforms and devices, and should thus be situated in its context. A civic portal may justifiably demand identification through biometric data; a forum or game may not require such personal data. The same gesture should not govern both. 
 Interviews with practitioners reinforced this view: one IT worker observed that identification processes (and their severity/complexity) expand whenever justification can be made. In a nutshell, the excuse of security becomes a slippery slope that creates more and more ways to “extract personal data” from users, as some put it during interviews. The same IT specialist suggested that “a good login should confirm ownership, not necessarily identity,” distinguishing transferable possession from intrusive disclosures of the one’s private information.
 My motivation is both analytical and propositional: to show how authentication has evolved into a universal checkpoint system, and to explore design alternatives that restore proportionality and meaningful reciprocity between users and platforms. The goal is not to sentimentalize login or aestheticize frustration, but to develop a framework: define context first, then design the relation of access it deserves.
@@ -83,60 +97,52 @@ Ultimately, this thesis speaks to two audiences. For theorists, it demonstrates 
 “The login experience” is a space of encounter between humans and machines, and can be improved upon.
 
 
-Historical Genealogy of Authentication and login
+Beginnings of Logins
 The first question this research must ask is: in what context does our current system of authentication exist? Early on, within this questioning, a good amount of  reflections came in. The trends of externalising logins, that is to have the experience leave the platform to enter new dimensions of interactions closer and closer to the body (new window on browser, access through a phone or device, biometry), did not originate from nothing. This hypothesis rests on the idea that login systems are not isolated inventions but cultural continuities constructed by the ideologies of their time. Which philosophies generated those developments in login experience design? 
 The act of login, far from being a purely technical necessity, is a routine of recognition with its own historical and cultural roots. It is a social practice, so to speak, in the repetitive and sacralised sense. To “log in” is to cross a threshold; to present oneself in a way that a system acknowledges as valid, and is often repeated multiple times. 
 But what constitutes “valid” to a system is entirely subjective, despite the objectivity seen within the practice of authentication. This practice has taken many forms across history: from tokens and seals in ancient societies, to anthropometric measurement and fingerprints in the 19th century, to passwords, multi-factor authentication, and biometrics in the digital era. Each stage represents a technical solution certainly, one that is defined by a cultural and political mindset that dictates how identity is defined and constructed, and who controls access. The act of identification begins there, in authentication, and its origins.
 
-
 First Ideas of Authentication in Real Life
 Long before the invention of digital systems, human communities devised rituals and instruments for controlling access within their spaces and communities. To authenticate was to demonstrate belonging, and to do so, they exchanged words and writings that only they would know. In this sense, authentication is one expression of what the anthropologist Victor Turner described as a rite of passage: a process of separation, liminality, and reintegration that marks movement from outsider to member.
 
-“In this, ritual participants are removed from ordinary society (separation) and enter a space where there is an absence of structure, where they are neither inside nor outside society (liminality),2 before returning to their previous positions at the end of the ritual process (reaggregation).”
+“In this, ritual participants are removed from ordinary society (separation) and enter a space where there is an absence of structure, where they are neither inside nor outside society (liminality),2 before returning to their previous positions at the end of the ritual process (reaggregation).” (Haggar, 2025)
 
 Authentication is a “rite of entry”, a cultural moment where identity was recognized by others and validated through symbolic means. From outsider, to liminal, to belonging
 Tokens and Seals…?
 One of the earliest material forms of authentication appeared in the ancient Near East, particularly in Mesopotamia. Archaeological sources describe the use of cylinder seals, which were small carved stones rolled onto clay tablets or containers. These were used to mark ownership and prevent tampering. According to the Metropolitan Museum of Art,
-“When seals were impressed on sealings — lumps of clay that were used to secure doors and the lids of storage jars— the seal impressions served to identify their owner and protect against unauthorized opening.” (Cylinder seal and modern impression, 2250) 
-Medieval wax seals continued this tradition. Legal historians note that “Seals were the only form of personal authentication in the Middle Ages. Deeds were not usually signed until the sixteenth century.”  Seals could be forged, broken, or stolen, certainly, but their power lay in the shared recognition of their authority. That very act of material recognition through detailed craftsmanship defined authentication.
+“When seals were impressed on sealings — lumps of clay that were used to secure doors and the lids of storage jars— the seal impressions served to identify their owner and protect against unauthorized opening.” (The Metropolitan Museum of Art, n.d.)
+Medieval wax seals continued this tradition. Legal historians note that “Seals were the only form of personal authentication in the Middle Ages. Deeds were not usually signed until the sixteenth century.”(University of Nottingham, n.d.)  Seals could be forged, broken, or stolen, certainly, but their power lay in the shared recognition of their authority. That very act of material recognition through detailed craftsmanship defined authentication.
 
 
 Watchwords and Speech…!
 Alongside objects, language itself became a credential. The Roman tessera militaris, a watchword distributed nightly to soldiers, accompanied with their tokens ensured that entry into a camp was restricted to those who knew the word. In Epitoma Rei Militaris which is a roman military handbook, Vegetius (a Roman writer from the Late Roman Empire circa late 4th century AD) emphasized the role of this verbal ritual in maintaining cohesion, noting that soldiers who spoke the watchword correctly were admitted as comrades, while those who failed were treated as outsiders.
 
-“Vegetius, in his Epitoma Rei Militaris, emphasized the role of this verbal ritual in maintaining cohesion: soldiers who spoke the word correctly were admitted as comrades, while those who failed were treated as outsiders. Here, recognition resided in the correct performance of speech.” 
-
+“Vegetius, in his Epitoma Rei Militaris, emphasized the role of this verbal ritual in maintaining cohesion: soldiers who spoke the word correctly were admitted as comrades, while those who failed were treated as outsiders. Here, recognition resided in the correct performance of speech.”  (Vegetius, as cited in Thayer, n.d.)
 Some linguists and sources highlight that authentication has always been performative, and performative utterances are powerful because they do not merely describe reality but enact it. To utter the correct watchword was to enact membership.
 
-“...To utter the sentence (in, of course, the appropriate circumstances) is not to describe my doing of what I should be said in so uttering to be doing or to state that I am doing it: it is to do it.” 
+“...To utter the sentence (in, of course, the appropriate circumstances) is not to describe my doing of what I should be said in so uttering to be doing or to state that I am doing it: it is to do it.” (Austin, 1955)
 
 Authentication is Social…
-Not unlike current IT security concerns, these early systems were never purely secure. Seals could be counterfeited, secret words discovered, and documents forged—just as today passwords leak, identities are stolen, and phishing exploits the fallibility of our identifiers. But their value was never in their infallibility. Authentication has always been a negotiation of trust, situated within material culture and collective belief. This negotiation persists, even as authentication migrates from shared symbols to algorithmic proofs. A seal or watchword only “worked” because those within a community agreed to treat it as binding. In this sense, authentication is less about the object itself than about the shared confidence that sustains it.
+Not unlike current IT security concerns, these early systems were never purely secure. Seals could be counterfeited, secret words discovered, and documents forged. Similar to today, in which passwords leak, identities are stolen, and phishing exploits the fallibility of our identifiers. But their value was never in their infallibility. Authentication has always been a negotiation of trust, situated within material culture and collective belief. This negotiation persists, even as authentication migrates from shared symbols to algorithmic proofs. A seal or watchword only “worked” because those within a community agreed to treat it as binding. In this sense, authentication is less about the object itself than about the shared confidence that sustains it.
 Seen in this light, contemporary logins (whether password entries or biometric scans) are not fundamentally new. They extend a long lineage of recognition practices in which access is not guaranteed by technology alone or by its supposed objectivity, but by the social consensus and institutional authority that define it. Each design decision in authentication arises from a cultural logic that legitimises certain kinds of proof over others. Yet the persistence of breaches and forgeries kept exposing the limits of trust as a human arrangement. To overcome that uncertainty, thinkers sought a proof that could not be faked, forgotten, or negotiated… They searched for a form of verification that would seem absolute. The answer, they believed, was the body itself.
 Bertillonage and Fingerprinting
-The nineteenth century marked a decisive turn in the history of authentication. A token, seal, or pass... Those were now less trustworthy than desired. If earlier systems relied on social recognition, the new ambition was to locate certainty in the body itself. The ideal of an infallible credential gave rise to techniques that transformed the body into data. Under the banner of science, identity became a matter of measurement and classification.
+The nineteenth century marked a decisive turn in the history of authentication. A token, seal, or pass... Those were now less trustworthy than desired. If earlier systems relied on social recognition, the new ambition was to locate certainty in the body itself. The ideal of an infallible credential gave rise to techniques that transformed the body into data. Under the banner of science, identity became a matter of measurement and classification.This drive to quantify the human body was not born in a vacuum. It was deeply entangled with the colonial and racist ideologies of the era, which sought to create hierarchical classifications of race and "deviance." The same tools of anthropometry used to identify criminals in Paris were deployed in colonial contexts to classify and subjugate indigenous populations, lending a veneer of scientific objectivity to white supremacist projects.
 In 1883, Alphonse Bertillon’s anthropométrie judiciaire embodied this shift. Combining photographs with precise bodily measurements (That is: head length, arm span, ear size), Bertillon sought to identify recidivists through a repeatable system of metrics. His method, quickly institutionalised by the Paris police, promised to replace human judgment with standardised evidence. Historian Simon Cole notes that this bureaucratic logic “replaced the marking of the criminal body with the marking of the criminal record” (Cole, 2001, p. 67). 
 “These documentary records encouraged the turn away from the use of branding, and other physical markers, as official indicators of criminal history. “The marking of the criminal record,” Simon Cole has suggested, “replaced the marking of the criminal body.”
-COLE, Simon A. Suspect Identities: A History of Fingerprinting and Criminal Identification. Cambridge, MA : Harvard University Press, 2001.
+
 
 What had once been a social negotiation of trust became an administrative production of identity, through the body as the ultimate identifier.
 This period was also one of profound scientific confidence. The dominant discourse of the late nineteenth century was structured around classification, control, and the rational mastery of nature. Figures such as Paul Broca, founder of the Société d’Anthropologie de Paris, extended anatomical measurement into social theory, linking bodily features to hierarchies of race and character (Broca, 1875). Within this context, Bertillonage did more than distinguish criminals: it enacted a belief that human difference could be rendered legible, and thus governable, through quantification.
 
-BROCA, Paul. Instructions craniologiques et craniométriques. Paris : C. Reinwald, 1875.
-Yet Bertillon’s system proved fragile. It demanded trained staff, careful conditions, and produced errors as it scaled. Fingerprinting, refined by Francis Galton in the 1890s, appeared to offer what anthropometry could not: permanence. “Finger prints,” Galton wrote, “are self-signatures, free from all possibility of faults in observation or clerical error; they apply throughout life” (1892, p. 168). With this claim, the body ceased merely to be measured and became its own proof. The ridge of the fingertip stood as a natural password. To this day, we see them as immutable, individual, and allegedly incorruptible.
-GALTON, Francis, 1892 (édition eBook 2011). Finger Prints [en ligne]. Projet Gutenberg. Disponible à l’adresse : https://www.gutenberg.org/files/36979/36979-h/36979-h.htm
-
-“Let us not forget two great and peculiar merits of finger prints; they are self-signatures, free from all possibility of faults in observation or of clerical error; and they apply throughout life.”
+Yet Bertillon’s system proved fragile. It demanded trained staff, careful conditions, and produced errors as it scaled. Fingerprinting, refined by Francis Galton in the 1890s, appeared to offer what anthropometry could not: permanence. “Finger prints,” Galton wrote, “are self-signatures, free from all possibility of faults in observation or clerical error; they apply throughout life” (Finger Prints, 1892, p. 168). With this claim, the body ceased merely to be measured and became its own proof. The ridge of the fingertip stood as a natural password. To this day, we see them as immutable, individual, and allegedly incorruptible. 
 This transition from social to biological proof marked the birth of biometric reasoning: the conviction that truth resides in the body, independent of context or community. In making the body measurable and comparable, modernity redefined authentication as an act of possession by institutions over individuals. It is a perceived logic that continues 
 
 Corbató and the Invention of Passwords
 
 The first password was not a grand security innovation but a pragmatic design patch.
-In 1961, Fernando J. Corbató’s team at MIT created the Compatible Time-Sharing System (CTSS) to allow multiple users to share the same computer. Each user needed private storage, and the simplest solution was to separate accounts by a short secret string. As Corbató recalled, “Putting a password on for each individual user as a lock seemed like a very straightforward solution.” What began as a routine partition of computational access introduced the cultural figure of the password, a digital echo of the Roman watchword.
+In 1961, Fernando J. Corbató’s team at MIT created the Compatible Time-Sharing System (CTSS) to allow multiple users to share the same computer. Each user needed private storage, and the simplest solution was to separate accounts by a short secret string. As Corbató recalled, “Putting a password on for each individual user as a lock seemed like a very straightforward solution.”(McMillan, 2012) What began as a routine partition of computational access introduced the cultural figure of the password, a digital echo of the Roman watchword.
 
- MCMILLAN, Robert. The World’s First Computer Password? It Was Useless Too. Wired [en ligne]. Disponible à l’adresse : https://www.wired.com/2012/01/computer-password/ [consulté le 9 octobre 2025]
-
-The illusion of control collapsed quickly. In 1966, a minor programming error caused CTSS to display its entire password file as the system’s “message of the day.” This event produced the first recorded password breach and prompted the introduction of hashed (FOOTNOTE WILL BE ADDED) storage, later formalised in Multics and Unix. (FOOTNOTE) 
+The illusion of control collapsed quickly. In 1966, a minor programming error caused CTSS to display its entire password file as the system’s “message of the day.” This event produced the first recorded password breach and prompted the introduction of hashed storage, later formalised in Multics and Unix.
 
 But the lesson was deeper than mathematics. Even the most rational systems inherit the vulnerabilities of the people who use and design them.
 
@@ -150,12 +156,11 @@ By 1979, Robert Morris and Ken Thompson had already identified the paradox of di
 The statement clarified the importance of understanding people within security, as it was a socio-technical problem. Passwords were never purely cryptographic, since users reproduced behaviour within their passwords and security hygiene. These were behavioural interfaces entangled with memory, fatigue, and habit. A colleague I interviewed echoed this sentiment: “A password is a part of you, and it changes with you.” 
 From Passwords to Platforms
 
-As networked life expanded, the single password could not keep pace. Users faced “password fatigue,” while large-scale breaches (FOONOTE LinkedIn (2012), Yahoo (2016), Equifax (2017)) showed that storing secrets centrally merely multiplied exposure.
-Industry responded with layers: combining passwords, with tokens/devices/phones, and biometrics.
-Multi-Factor Authentication increased theoretical security but also fragmented the gesture of access. Users and systems, who had a direct interaction for logging in, are now dispersed across devices, emails, and apps. All of these factors introduced logistical friction while concealing the logic of verification. Recovery processes became the real test of trust: users learned that security could lock them out as easily as it protected them. (SOURCE MISSING, DO I USE INTERVIEWS?)
+As networked life expanded, the single password could not keep pace. Users faced “password fatigue,” while large-scale breaches (such as the LinkedIn breach in 2012, the Yahoo breach in 2016, and the Equifax breach in 2017) showed that storing secrets centrally merely multiplied exposure.
+Industry responded with layers: combining passwords, with tokens/devices/phones, and biometrics.Multi-Factor Authentication increased theoretical security but also fragmented the gesture of access. Users and systems, who had a direct interaction for logging in, are now dispersed across devices, emails, and apps. All of these factors introduced logistical friction while concealing the logic of verification. Recovery processes became the real test of trust: users learned that security could lock them out as easily as it protected them, a sentiment echoed in interviews where participants described the panic of losing access to an authenticator app. 
 
 
-To reduce this cognitive burden, the 2000s introduced Single Sign-On (FOOTNOTE ON SSO) and federated identity systems such as OAuth.
+To reduce this cognitive burden, the 2000s introduced Single Sign-On and federated identity systems such as OAuth.
 By the late 2000s, standards like OAuth formalized delegated access. As was written in 2007 on the release of OAuth 1.0:
 “OAuth aims to unify the experience and implementation of delegated web service authentication into a single, community-driven protocol. OAuth builds on existing protocols and best practices that have been independently implemented by various websites. An open standard, supported by large and small providers alike, promotes a consistent and trusted experience for both application developers and the users of those applications. “ (OAUTH CORE WORKGROUP, 2007).
 
@@ -163,7 +168,7 @@ By the late 2000s, standards like OAuth formalized delegated access. As was writ
  “Login with Google” and “Login with Apple” promised convenience but effectively externalised trust: the act of verification left the platform and entered a corporate infrastructure. Users no longer authenticated to a service but through an intermediary that authenticated on their behalf. In exchange for simplicity, authentication became infrastructural. The login experience was thus opaque, distant, and dependent.
 The Biometric Turn
 
-The 2010s extended this logic into the body once again. With Apple’s Touch ID (2013) and Face ID (2017), authentication became instantaneous and intimate. “Your fingerprint is one of the best passwords in the world,” declaired Dan Riccio, Apple's senior vice president of Hardware Engineering. "It's always with you, and no two are exactly alike."
+The 2010s extended this logic into the body once again. With Apple’s Touch ID (2013) and Face ID (2017), authentication became instantaneous and intimate. “Your fingerprint is one of the best passwords in the world,” declared Dan Riccio, Apple's senior vice president of Hardware Engineering. "It's always with you, and no two are exactly alike." (Hughes, 2013).
 
 
 The rhetoric echoed Francis Galton’s 1892 claim that fingerprints were “self-signatures… free from all possibility of clerical error.” Biometric devices promise security without effort, yet they also collapse the distinction between person and credential: the user is the key. 
@@ -188,22 +193,21 @@ Problematic: The Contemporary Condition of Login
 Contemporary authentication systems promise frictionless access and uncompromising security. Passwords, biometrics, and device-based passkeys operate invisibly, distributed across platforms and infrastructures. This invisibility is not neutral. When authentication is delegated to corporate infrastructures or embedded in proprietary devices, users lose interpretive agency. The process that should confirm identity instead reinforces dependence. As observed in the fieldwork, people describe authentication as confusing, unpredictable, or alienating.  Security succeeds technically but fails relationally, since the experience is governed by systems they cannot see or influence.
 The problem, therefore, is not that login requires too much effort, but that its friction is perceived by users as meaningless. Verification is dispersed across devices, emails, and biometrics, yet none of these actions invite understanding or provide context. This situation leaves users both over-protected and disempowered, hesitant or too passive to participate in the logic of their own security.
 Interfaces and Sites of Production
-As Alexander R. Galloway reminds us, the interface is not a neutral passageway between user and system but an active site of production that shapes both. To log in is not simply to gain access; it is to perform the gestures that sustain a structure of recognition and control. Each act of authentication reaffirms the authority of the system, transforming users into compliant participants in its choreography of trust.
-“One must transgress the threshold, as it were, of the threshold theory of the interface. A window testifies that it imposes no mode of representation on that which passes through it. A doorway says something similar, only it complicates the formula slightly by admitting that it may be closed from time to time, impeding or even blocking the passengers within.”
- GALLOWAY, Alexander R., 2012. The Interface Effect. Cambridge, UK ; Malden, MA : Polity, p. 40. ISBN 978-0-7456-6252-7.
-Wendy Hui Kyong Chun extends this argument by showing that interfaces do more than mask power; they make ideology feel like interaction. The login’s minimalism, its repetitive neutrality, and its polite reassurance teach users to conflate safety with submission. The seemingly seamless design leads, in fact, to the codification of obedience as usability (Chun 2011, p. 59).
-“Both conceptually and thematically, these interfaces offer their users a way to map and engage an increasingly complex world allegedly driven by invisible laws of late capitalism. Most strongly, they induce the user to map constantly so that the user in turn can be mapped.”
-CHUN, Wendy Hui Kyong, 2011. Programmed visions: software and memory. Cambridge, Mass : MIT Press, pp. 59, Software studies. ISBN 978-0-262-01542-4.
+As Alexander R. Galloway (2012) reminds us, the interface is not a neutral passageway between user and system but an active site of production that shapes both. To log in is not simply to gain access; it is to perform the gestures that sustain a structure of recognition and control. Each act of authentication reaffirms the authority of the system, transforming users into compliant participants in its choreography of trust.
+In The Interface Effect, he writes, “One must transgress the threshold, as it were, of the threshold theory of the interface. A window testifies that it imposes no mode of representation on that which passes through it. A doorway says something similar, only it complicates the formula slightly by admitting that it may be closed from time to time, impeding or even blocking the passengers within” (p. 40).
+Wendy Hui Kyong Chun (2011) extends this argument by showing that interfaces do more than mask power; they make ideology feel like interaction. The login’s minimalism, its repetitive neutrality, and its polite reassurance teach users to conflate safety with submission. The seemingly seamless design leads, in fact, to the codification of obedience as usability (p. 59).
+As she argues, “Both conceptually and thematically, these interfaces offer their users a way to map and engage an increasingly complex world allegedly driven by invisible laws of late capitalism. Most strongly, they induce the user to map constantly so that the user in turn can be mapped” (p. 59).
 From this perspective, authentication produces a behavioural relation. Each prompt (“Verify,” “Allow,” “Continue”) rehearses a micro-performance of obedience. The repetition of these actions transforms security into a daily practice of compliance, and may enhance feelings of reactance in users.
 The Externalisation of Login
 Each new method of authentication (Login with Google, Sign in with Apple, Face ID, passkeys, or two-factor verification) transfers a piece of the user’s identity to another entity, both technically and symbolically.
 (INSERT GRAPH)
-Recognition no longer happens between the user and the platform they wish to access; it now occurs through external infrastructures that authenticate on the platform’s behalf. In exchange for convenience, users and designers surrender control over the very ritual of entry.
+Recognition no longer happens between the user and the platform they wish to access; it now occurs through external infrastructures that authenticate on the platform’s behalf. In exchange for convenience, users and designers surrender control over the very process of entry.
 This dependency brings a quiet but profound loss of agency. A user may “log in” to an independent service, but the gatekeeping is performed elsewhere. The act of recognition is displaced, abstracted, and standardised. As platforms integrate single sign-on or passkey systems, they relinquish their thresholds to corporate design languages and infrastructural protocols. The login, once a symbolic interface between user and platform, becomes a borrowed window governed by external authority.
 
 The convenience of a universal button hides the political fact that authentication now resides within a few private ecosystems. Designers lose access to the symbolic real estate of the threshold, as the look, feel, and logic of entry are dictated elsewhere.
 Toward a Situated Design of Security
-The paradox of contemporary login design is therefore structural. It achieves universality and predictability by removing context and visibility. It builds trust through consistency but erodes understanding in the process. The user’s role is reduced to one of procedural confirmation rather than informed participation.
+The paradox of contemporary login design is therefore structural. It achieves universality and predictability, by removing context and visibility from the user. It builds trust through consistency of design, looks and methods, but erodes understanding in the process. The user’s role is reduced to one of procedural confirmation rather than informed participation
+There is a palpable tension between the demand for seamless, universal access and a growing public resistance to the datafication of identity. The Swiss public’s skepticism towards the e-ID law, rooted in fears of data theft and surveillance, alongside the vehement backlash against intrusive age-verification measures on social platforms, reveals a critical juncture. Users are increasingly aware that the price of entry is often their biometrics, their anonymity, or their personal data, leading to a climate of distrust where the command to "prove who you are" feels less like a security measure and more like an extraction of private data.
 Design can intervene in this imbalance. Rather than removing friction, it can redefine it, making authentication contextual, perceptible, and situated in experience. The challenge is to imagine login as a moment of engagement rather than surrender, where security and comprehension reinforce one another. But how does one do that?
 This problematic situates the core of this research: to explore how authentication might be redesigned as a proportional, contextual, and participatory act, one that strengthens digital security by giving users a meaningful role within it. The following research aims to figure out, first and foremost, how users feel and interact within the context of the “login experience.”
 
@@ -214,9 +218,9 @@ Methodology and Research Design
 This research combines observation, user inquiry, and speculative experimentation to understand users’ relationships with modern authentication methods. Rather than pursuing quantitative generalisation, the study seeks to find situated insight, in how authentication systems shape, and are shaped by, everyday work and perception. Because authentication is embedded in everyday gestures, its analysis requires methods capable of addressing lived, situated interactions. Research-through-design supports this by allowing iterative reflection between design artefacts, contexts, and theories of recognition. 
 Scope and Phases
 The research developed in three interrelated phases:
-Field Observation: ethnographic observation within a clinical-administrative healthcare environment (approximately three weeks of 40h of observation, over multiple shifts).
-User Inquiry: an online survey (n = 20 valid responses) and seven semi-structured interviews exploring users’ perceptions of login, security, and trust.
-Prototype research:  design experiments that re-interpret authentication as a situated or playful interaction.
+Field Observation: ethnographic observation within a clinical-administrative healthcare environment (approximately three weeks of 40h of observation, over multiple shifts, Between June 23rd 2025 and July 11th 2025).
+User Inquiry: an online survey (n = 20 valid responses) and seven semi-structured interviews exploring users’ perceptions of login, security, and trust. (In September 2025)
+Prototype research:  design experiments that re-interpret authentication as a situated or playful interaction. (From September 2025 to October 2025)
 
 
 Data Collection and Participants
@@ -228,7 +232,7 @@ Transcripts, notes, and survey responses were recorded qualitatively. Recurring 
 Ethical Considerations
 All participants were informed of the study’s aims and of their right to anonymity and withdrawal. Contextual details of the clinical site have been anonymised to respect confidentiality and institutional policy. No personal identifiers or patient data were collected.
 Outcome and Relevance
-This methodological design connects empirical observation with speculative design. The field and user studies reveal how contemporary authentication practices distribute effort, dependence, and literacy; the subsequent speculative and experimental phases test how these relations might be redesigned to produce security that is robust as well as comprehensible and proportionate to context.
+This methodological design connects empirical observation with speculative design. The field and user studies reveal how contemporary authentication practices distribute effort, dependence, and literacy. The subsequent speculative and experimental phases test how these relations might be redesigned to produce security that is robust as well as comprehensible and proportionate to context. But first, to ground this theory in the material reality of daily work, field research was conducted in a setting where the stakes of authentication are immediately tangible: a military healthcare-administrative setting. Here, the abstract consequences of externalisation and opaque design become vividly clear, impacting data as well as patient care itself.
 FIELD RESEARCH
 Administrative Healthcare Context
 In a military healthcare-administrative setting, authentication processes illustrate the broader policy shift toward total digitalisation. Access to facilities and digital infrastructures was mediated by a single smartcard issued through a central authority. Activation required identity confirmation via distant IT services located in Bern (Switzerland), including verification of personal details and coordination with on-site technicians who could later revoke access remotely. This procedure often delayed healthcare work for several hours or days, leaving staff dependent on both human and bureaucratic intermediaries to perform basic tasks, and sometimes impeding on crucial health procedures.
@@ -236,13 +240,19 @@ In a military healthcare-administrative setting, authentication processes illust
 The card simultaneously served as both a physical and digital key. Staff were required to insert it into terminals to access medical data systems, yet the same card was also necessary for entering or exiting the building. The result was an operational paradox: to remain authenticated digitally, the user had to stay physically anchored to the workstation. Leaving the card in a terminal was a risk for security; removing it meant immediate disconnection. However, since it was impossible to remain at the workstation at all times due to growing patients’ needs, the card was left unattended for quite a good amount of time.
 Some staff resorted to informal workarounds (borrowing cards, leaving terminals open, or sharing credentials) to sustain workflow continuity. These practices, while technically insecure, represented pragmatic responses to inflexible design. Staff also reported being locked out of the infirmary numerous times, as a result of leaving the card on-site for convenience’s sake.
 This situation exposes the tension between centralised security and local autonomy. Authentication, intended to protect sensitive information, became a mechanism of constraint.This echoes the problematic’s argument that security, when excessively externalised, immobilises the very agents it is meant to empower. Agency was displaced from those responsible for patient care to distant infrastructures capable of granting or revoking access at will. Security here functioned less as a guarantee of protection than as a mode of control that immobilised the very actors it sought to safeguard.
+Comparison with DuoPass
+
+(images will be commented)
+The failure of this hardware-based system highlights the need for a different approach, perhaps one that is both secure and aligned with human workflows. This need is addressed by research into cognitive authentication models, such as the DuoPass study (Di Gianmarino et al., 2022). Developed specifically for healthcare environments, DuoPass employed a dual-password mechanism that paired user-chosen images with textual cues. By anchoring the login in associative memory and personal context, the system improved memorability, reduced lockouts, and increased perceived security. Unlike the rigid smartcard, DuoPass transformed the login from a procedural hurdle into a meaningful, user-driven gesture, demonstrating that robust authentication need not depend on external hardware or create workflow bottlenecks.
+The contrast is stark: where the smartcard system produced friction and workarounds, a system like DuoPass aims to generate ease-of-use and comprehension. This case demonstrates that security can be strengthened by integrating contextual and cognitive design principles, rather than by multiplying external layers of verification that ultimately displace user agency.
+
 
 USER STUDIES
 Surveys and Everyday Patterns
 
 A qualitative online survey was conducted in September 2025 to explore how users perceive authentication in their daily digital lives.
 Twenty participants between the ages of 21 and 36 responded. Most were based in the United States, with others in Switzerland, the Netherlands, Germany, Sweden, Canada, Hungary, and France.
-Respondents described themselves through a wide range of gender identities, with a notable proportion identifying as nonbinary or agender. Many reported long familiarity with computers—several having “been online for most of [their lives]” or “introduced to computers through public schooling in the 90s.” The sample, while small, represents a digitally fluent and socially diverse group.
+Respondents described themselves through a wide range of gender identities, with a notable proportion identifying as nonbinary or agender. Many reported long familiarity with computers, several having “been online for most of [their lives]” or “introduced to computers through public schooling in the 90s.” The sample, while small, represents a digitally fluent and socially diverse group.
 Most participants used both phone and computer daily, often across work and leisure contexts. Tumblr, Discord, YouTube, and Gmail were the most common platforms, indicating hybrid personal–social–institutional use.The survey thus captures authentication as it occurs across overlapping ecologies of use, rather than within a single service.
 Textures of Friction
 Participants consistently described login as a minor but persistent friction. It is seen as an act that interrupts flow, produces mild irritation, and occasionally escalates into crisis. Notably, a few specific design patterns concentrated frustration.
@@ -250,11 +260,10 @@ Two-Factor Authentication’s Burden
 Phone-based verification was the dominant source of frustration.
 What is the most frustrating moment, question or action you face when logging into a website?
 “Anything that asks me to confirm who I am - a text to my mobile, a requirement of my face, or something. Any "extra" "safety" step. I do detest 2-factor authentification - something that was implemented in my workplace not long after I started working there, and it makes it even more impossible to log in to my work email and other services.” 
- “Two-factor is so annoying sometimes. I do understand it’s for heightened security, but sometimes bouncing between my phone to search for a code or an email or opening a separate app becomes clunky and inconvenient.” 
- “Any time a website refuses to accept a password to login (e.g. ‘check your e-mail for a code’), or requires 2FA (not everyone has a phone nor should).” 
+“Two-factor is so annoying sometimes. I do understand it’s for heightened security, but sometimes bouncing between my phone to search for a code or an email or opening a separate app becomes clunky and inconvenient.” 
+“Any time a website refuses to accept a password to login (e.g. ‘check your e-mail for a code’), or requires 2FA (not everyone has a phone nor should).” 
 Across these statements, authentication’s externalisation becomes literal: a process that migrates from one device to another, demanding the user’s attention and physical effort.
 The frustration was more so linked to disproportion. The asymmetry between the perceived sensitivity of the task and the level of verification demanded generated user frustration.
-
 CAPTCHA and Unclear Limits
 CAPTCHAs, re-entry limits, and similar “proofs of humanity” were another recurrent theme.
 What is the most frustrating moment, question or action you face when logging into a website?
@@ -302,7 +311,7 @@ Control, Portability, Consent. Ownership.
 Almost every participant agreed in principle that accounts “should belong” to them, but meanings diverged.
 Should your online accounts belong to you? What does online ownership mean to you?
 “Yes. I do feel like I have a too-simplistic view of online ownership, but my account is my account, which means it's mine and for me. My things :) and also my responsibility.” 
- “Yes and no? I think you should have the right to keep everything on an account you make, but if this is an account on the internet that means somewhere there has to be a server holding that data. Ultimately if a website or server goes down, that data is lost. If something on an account is really really important to you, you should keep it somewhere that isn't maintained by someone else. But 'online ownership' doesn't really mean anything to me as the kind of person who tries to find CDs and DVDs of music and movies I like because I don't trust streaming platforms to always be reliable and there. The same goes for an account, I think it's right for it to be in your ownership, but the thing is, you're not the person who has your data. Someone else has that data, so you don't have control over it. ”
+ “Yes and no? I think you should have the right to keep everything on an account you make, but if this is an account on the internet that means somewhere there has to be a server holding that data. [...] The same goes for an account, I think it's right for it to be in your ownership, but the thing is, you're not the person who has your data. Someone else has that data, so you don't have control over it. ”
  “Yes. It's hard to articulate. But at the very least, even if my account is technically 'borrowed' or more of an admission ticket, the things i upload are mine. This is important to me as someone who does art. Even if the owner of the site disagrees, preserving the illusion that I own my account by not messing with it is prefereable.”
 Ownership, in these accounts, is relational rather than legal: it concerns the right to access, export, and consent. Users equated ownership with autonomy: the ability to enter and exit on their own terms, to recover what they contributed, and to refuse unwanted extraction.
 Participants tied ownership to reversibility and to informed consent:
@@ -324,66 +333,60 @@ The survey thus provides the empirical base to the claim that authentication sho
 Login design should respond to its context, not only in terms of security level but also of aesthetic and experiential coherence. When authentication inherits the tone and texture of its environment, it ceases to interrupt and instead becomes part of the experience.
 
 Interviews; the lived experience of Login
-To complement the historical and theoretical framing of authentication, a series of semi-structured interviews was conducted between June and October 2025. Participants were drawn from different professional contexts: healthcare (candidate E), government IT (candidates F and L), finance (candidates R and S), and everyday consumer use (candidate D). The goal was not to produce generalizable data but to understand how people describe and manage the act of logging in in their daily work and personal routines.
+To complement the historical and theoretical framing of authentication, a series of semi-structured interviews was conducted between June and October 2025. Participants were drawn from different professional contexts: healthcare (Angela), government IT (Finn and Emeric), finance (Rami and Serena), and everyday consumer use (Idris). The goal was not to produce generalizable data but to understand how people describe and manage the act of logging in in their daily work and personal routines.
 Participants spoke of login as a repetitive negotiation between convenience and control. They were aware of the security measures protecting their data, but often described them as excessive or inconsistent. Some had learned to adapt (saving passwords, synchronising apps, or using Face ID) while others had developed workarounds or avoidance habits. What emerged most clearly was a sense that login design has stagnated: that its gestures are now predictable, mechanical, and frustrating, particularly when recovery processes fail. For some, the problem was not the need to verify identity but the absence of design sensitivity, as systems felt indifferent to context or use.
 Friction 
 For many participants, friction is both nuisance and reassurance.
-Candidate S, who works in auditing, described a login chain that included a password, a CAPTCHA, and a text message confirmation. “It’s annoying,” she said, “but at least I know nobody will hack my account, because there are so many steps.” The irritation became part of her sense of protection: the delay made her feel safer. The presence of friction, regardless of if it was a source of true online protection or not, provided a sense of security and trust towards the system’s judgment.
-Candidate E, a psychology student working in healthcare, voiced the opposite side of that paradox. Multi-factor authentication at work and school initially felt excessive, and when her phone broke and she lost access to the authenticator app, the same friction turned to panic. “If you don’t have much affinity with technology, it’s really hard to use that stuff once it doesn’t work the way it should,” she said. The process that once comforted her became a barrier that only a technically literate user could overcome.
-These contradictory feelings point to a common pattern: security communicates itself through resistance. Yet friction without communication breeds anxiety. This observation aligns with another  study, surrounding a method titled DuoPass (Di Gianmarino et al., 2022). It showed that anchoring passwords in familiar, user-defined images improved memorability (through contextual images such as work places they inhabit) but perceived safety. By translating friction into comprehension (say, replacing the tension of the platform with contextual locimetric logins) (FOOTNOTE), such designs preserve a sense of effort without punishment, which is something current systems rarely achieve.
+Serena, who works in auditing, described a login chain that included a password, a CAPTCHA, and a text message confirmation. “It’s annoying,” she said, “but at least I know nobody will hack my account, because there are so many steps.” The irritation became part of her sense of protection: the delay made her feel safer. The presence of friction, regardless of if it was a source of true online protection or not, provided a sense of security and trust towards the system’s judgment.
+Angela, a psychology student working in healthcare, voiced the opposite side of that paradox. Multi-factor authentication at work and school initially felt excessive, and when her phone broke and she lost access to the authenticator app, the same friction turned to panic. “If you don’t have much affinity with technology, it’s really hard to use that stuff once it doesn’t work the way it should,” she said. The process that once comforted her became a barrier that only a technically literate user could overcome.
+Emeric, an IT project manager working for the Canton of Neuchâtel, situated himself between those two extremes. From his professional standpoint, security is complex albeit poorly communicated: “It’s very uniform and not necessarily the easiest for users,” he explained, noting that even government platforms that prioritize safety often disregard user experience. “How do we manage when we have several passwords to remember or for different platforms? And then we see all kinds of practices and derives with post-its on the screen…”.
+These contradictory feelings point to a common pattern: security communicates itself through resistance. Yet friction without communication breeds anxiety. This is the critical distinction between mere obstruction and meaningful effort. The DuoPass study demonstrates that when friction is translated into comprehension (when the effort of login itself becomes a legible, even meaningful, interaction) it preserves a sense of security without the accompanying punishment. This transformation from an obstructive checkpoint to a coherent gesture is what current systems so rarely achieve.
 (IMAGE)
 Externalisation
-Externalised authentication was accepted by some participants, rejected by others. Candidate F, who works in government IT, described a pragmatic trust in official systems: “I don’t mind the tax office tracing me; that’s the point. But Facebook or Uber Eats don’t need that justification.” For him, externalisation is legitimate only when socially mandated; otherwise, it becomes surveillance without a contract.
-Candidate E’s experience exposed the emotional cost of this dependence. When her authenticator stopped working, she realised her identity was tethered to her phone, and the subsequent loss of it caused much more damage. “I panicked,” she said, “because the system no longer recognised me.” 
-Together these accounts suggest that externalisation is not inherently problematic; it becomes so when it is applied uniformly across contexts that do not demand it. In practice, dependency on opaque infrastructures shifts the burden of trust outward, while leaving the user responsible for failures she cannot fix.
+Externalised authentication was accepted by some participants, rejected by others. Finn, who works in government IT, described a pragmatic trust in official systems: “I don’t mind the tax office tracing me; that’s the point. But Facebook or Uber Eats don’t need that justification.” For him, externalisation is legitimate only when socially mandated; otherwise, it becomes surveillance without a contract. He further crystallized the ideal of user-centric authentication by defining a “good login” as one where “you can confirm you are the owner of an account, but where the account... cannot be used to confirm that you are the owner.” This distinction captures the critical difference between proving control and disclosing identity that most contemporary systems blur.
+Emeric elaborated on this institutional trust from an insider’s view. He described how many systems he manages depend on authentication chains that users “don’t necessarily understand,” which produces dependence rather than literacy. Yet even he relies on a password manager to handle the complexity of his multiple roles and accounts—an arrangement he finds convenient but precarious. “I like when it automates everything,” he admitted, “but I also know that every password manager can fail. There’s always a breach somewhere.”,then explained a breach in his previous password manager caused him to switch to a new one. The security that comforts him is simultaneously the source of vulnerability, illustrating how externalisation distributes risk away from the user only to return it through systemic fragility.
+Angela’s experience exposed the emotional cost of this dependence. When her authenticator stopped working, she realised her identity was tethered to her phone, and the subsequent loss of it caused much more damage. “I panicked,” she said, “because the system no longer recognised me.” 
+Together these accounts suggest that externalisation is not inherently problematic; it becomes so when it is applied uniformly across contexts that do not demand it. In practice, dependency on opaque infrastructures shifts the burden of trust outward, while leaving the user responsible for failures they cannot fix.
 Ownership 
-Ownership was the most fragile and emotionally charged theme. Candidate D, a restaurant worker, felt that his accounts “never really belonged” to him: “They can delete everything tomorrow.” He described a sense of temporary tenancy within platforms, a feeling echoed by Candidate E, who said she only felt ownership when she could decide whether her account was deleted. “I guess really owning it would mean having your name on it and having a say on where it goes,” she reflected.
-Candidate F articulated a key distinction that resonates with current design debates: “A good login should confirm ownership, but not identify who I am and what constitutes me.” His remark captures what many authentication systems overlook: the difference between control and disclosure. Users do not necessarily want to be known; they want to remain in charge, and have access to user-centric methods.
+Ownership was the most fragile and emotionally charged theme. Idris, a restaurant worker, felt that his accounts “never really belonged” to him: “They can delete everything tomorrow.” He described a sense of temporary tenancy within platforms, a feeling echoed by Angela, who said she only felt ownership when she could decide whether her account was deleted. “I guess really owning it would mean having your name on it and having a say on where it goes,” she reflected.
+Finn articulated a key distinction that resonates with current design debates: “A good login should confirm ownership, but not identify who I am and what constitutes me.” His remark captures what many authentication systems overlook: the difference between control and disclosure. Users do not necessarily want to be known; they want to remain in charge, and have access to user-centric methods.
 Literacy
-The interviews also revealed how design choices shape everyday discipline. Candidate R, a finance worker who also worked in healthcare settings, celebrated the seamlessness of modern logins: “Everything’s easier now,” he said, “I don’t understand why you’d want to change anything. I have 2FA on my devices, a password manager, and all is fine. Do you know how many hacking attempts there are during a single day?” equating his multiple security methods with safety. Yet in his professional environment, he routinely left secured terminals unlocked, and his behaviour was reported to be lax regarding safety issues. Assuming  the system would handle risk automatically, he took more local security threats as less of a risk. His belief in seamlessness produced complacency, and in turn, risked being costly for his supervisors.
-Candidate E represented the opposite response: constant verification left her anxious and over-attentive, afraid of losing access. Both cases stem from the same design impulse, which was to hide complexity from the user. When security becomes invisible, awareness atrophies; when it becomes over-visible, anxiety replaces understanding. This mirrors Chun’s (2011) critique of transparency as control: systems oscillate between opacity and hyper-visibility without fostering understanding.
+The interviews also revealed how design choices shape everyday discipline. Rami, a finance worker who also worked in healthcare settings, celebrated the seamlessness of modern logins: “Everything’s easier now,” he said, “I don’t understand why you’d want to change anything. I have 2FA on my devices, a password manager, and all is fine. Do you know how many hacking attempts there are during a single day?” equating his multiple security methods with safety. Yet in his professional environment, he routinely left secured terminals unlocked, and his behaviour was reported to be lax regarding safety issues. Assuming  the system would handle risk automatically, he took more local security threats as less of a risk. His belief in seamlessness produced complacency, and in turn, risked being costly for his supervisors.
+Angela represented the opposite response: constant verification left her anxious and over-attentive, afraid of losing access. Both cases stem from the same design impulse, which was to hide complexity from the user. When security becomes invisible, awareness atrophies; when it becomes over-visible, anxiety replaces understanding. This mirrors Chun’s (2011) critique of transparency as control: systems oscillate between opacity and hyper-visibility without fostering understanding.
 In truth, it is possible to improve these through design, by instead cultivating literacy as calm awareness: users should know what each step achieves without being overburdened by it. This balance recalls the principle demonstrated by DuoPass, that anchored cognitive security in meaningful cues increases both retention and confidence. By working with, rather than against, users’ memory and perception, login can become a site of comprehension instead of compliance.
-Comparison with DuoPass
-
-(images will be commented)
-The DuoPass study (Di Gianmarino et al., 2022) offers a useful counterpoint. Developed for healthcare environments, DuoPass employed a dual-password mechanism pairing user-chosen images with textual cues. Through anchoring login in associative memory, the system improved memory, reduced lockouts, and increased perceived security. Importantly, it generated ease-of-use, rapid adoption of login systems, comprehension and better security, rather than inconvenience. The cognitive act of remembering replaced procedural methodical repetition, transforming the login into a meaningful, user-driven gesture.
-DuoPass demonstrates that authentication need not depend on hardware or centralised control to remain secure. Both Duopass and current biometric methods of login manage sensitive medical data, yet their underlying philosophies diverge sharply. 
-Authentication can be strengthened by integrating contextual and cognitive design principles rather than by multiplying external layers of verification. 
 Synthesis
-Across these accounts, a consistent pattern emerges. People do not object to security itself; they object to its uniformity and opacity.They appreciate friction when it is expected, situated/explained and justified, but resent it when it feels arbitrary. Users long for systems that acknowledge their agency. These findings suggest a direction beyond critique: authentication could evolve laterally rather than vertically. 
-These observations empirically confirm the problematic outlined earlier: authentication fails not through insufficient security, but through its disconnection from situated comprehension and user participation. 
-Instead of further streamlining or externalising, designers could build upon the scaffolds users already engage with (memory, relation, and play) to create forms of login that are secure because they are understood. Techniques such as those tested in DuoPass, which anchor security in personally meaningful cues, demonstrate that usability and memorability need not oppose robustness.
-The following chapter develops this proposition through speculative prototypes that explore what happens when authentication is treated as a creative, situated interaction. 
+The testimony of users coalesces around a central tension: security is accepted as necessary, but rejected when its implementation feels arbitrary or opaque. Friction is tolerated, even welcomed, when it is perceived as proportional to the context. However, when authentication becomes a standardized experience of externalized checks (disconnected from the user’s understanding and control) it generates frustration and a sense of alienation.
+These findings give empirical weight to the central problematic of this thesis. The login, far from being a neutral gateway, emerges as a practice that can alienate users from the very systems meant to serve them. The anxiety of lockout, the resentment towards opaque multi-factor steps, and the nuanced desire for ownership without over-identification…Each of these experiences point to a relational failure in contemporary authentication design.
+This diagnosis suggests a constructive path. The solution is not necessarily more security, but a different kind of security: one that engages the user’s own faculties of memory, context, and comprehension. The positive response to systems like DuoPass indicates a promising direction. By anchoring the authentication process in meaningful, user-defined cues, security can become more memorable and less punitive, in an attempt to enhance user participation.
+Guided by these principles, the following chapter moves from critical analysis to propositional design. It presents a series of experimental prototypes that explore how authentication can be reimagined as a contextual, legible, and participatory interaction… a research in response to the user needs and frustrations documented here.
+Experiment 1 – Login Card Game
 
-Speculative Logins 
-Experiment 1 – Login Ritual Game
-
-Purpose
-This experiment explored how people respond when the act of login is turned into a shared, physical performance. The guiding question was: what happens when authentication depends on other people rather than on a machine? The goal was to make participants feel the dependency, hesitation, and suspicion that often accompany digital security routines.
 Participants and Setting
 Three sessions were held with groups of design students aged roughly twenty to forty.The sessions took place in a classroom, lasting under thirty minutes each. Group sizes were three, four, and six participants. All participants already knew one another, which helped maintain an informal atmosphere.
+Purpose
+This experiment explored how people respond when the act of login is turned into a shared, physical performance. The guiding question was: what happens when authentication depends on other people rather than on a machine? The goal was to make participants feel the dependency, hesitation, and suspicion that often accompany digital security routines.
 Materials
-A deck of Login Cards printed with short rituals or actions.
-Blank Cards so players could invent new rituals.
+A deck of Login Cards printed with short sentences describing actions.
+Blank Cards so players could invent new actions.
 A sealed envelope acting as the “reward.”
 One Game Master (the researcher) to read the rules, validate actions, and observe play.
 
 
-The printed rules described a simple sequence: each player received one hidden Login Card, visible only to the Game Master. A round ended when a ritual was completed or when only one player remained.
+The printed rules described a simple sequence: each player received one hidden Login Card, visible only to the Game Master. A round ended when a secret action was completed or when only one player remained. Rules are explained in the annexe.
 Observations
-The first session became playful and competitive. Players quickly tried to trick others with impossible or confusing rituals to win faster.
+The first session became playful and competitive. Players quickly tried to trick others with impossible or confusing actions to win faster.
 In later sessions, as the groups grew larger hesitation blundered the experience. Many stopped acting altogether, afraid of being “found out.” One participant remarked, “I can’t perform this or I’ll be found out immediately.” That sentence captured the central mood: a mix of self-consciousness and surveillance. While two groups managed to complete the game, most participants spent their time watching and second-guessing one another.
 Researcher’s Notes
 Explaining and remembering all the rules proved unexpectedly hard. As Game Master, I often felt lost, which weakened the structure of play. In retrospect, that confusion in users and myself mirrored the opacity of real-world login procedures: users follow instructions they did not design and may not fully understand. The disorientation became part of the result, showing how rules can foster more hesitation rather than comprehension.
 Interpretation
-Transforming login into a group ritual revealed how fragile trust becomes once verification moves beyond individual control. The mechanics of guessing and observation reproduced the unease of multi-factor systems where authentication is distributed across external checks. The main insight is that excessive layers can stall participation entirely. The challenge for later prototypes is therefore to preserve meaningful friction: enough resistance to signal care and recognition, but not so much that it prevents action altogether.
+Transforming login into a group practice revealed how fragile trust becomes once verification moves beyond individual control. The mechanics of guessing and observation reproduced the unease of multi-factor systems where authentication is distributed across external checks. The main insight is that excessive layers can stall participation entirely. The challenge for later prototypes is therefore to preserve meaningful friction: enough resistance to signal care and recognition, but not so much that it prevents action altogether.
 Experiment 2 — The Shared Access Game
 (IMAGES IMAGES)
 Objective and Premise
 Objective and Premise
 This exercise examined what happens when entry depends on another person rather than on a system. The aim was to test the limits of collective authentication. Could access function through mutual agreement instead of automated verification?
-Setup
-The experiment took place in a classroom with small groups of participants (usually in pairs or trios). Each person could only re-enter the room after leaving if someone already inside agreed to let them back in. When a participant wanted to return, they messaged the researcher, who then asked the person in the room whether to approve or refuse entry.
+Setup (to rewrite)
+The experiment took place in a classroom with small groups of participants (usually in pairs or trios). Each person could only enter the room after leaving if someone already inside agreed to let them back in. When a participant wanted to return, they messaged the researcher, who then asked the person in the room whether to approve or refuse entry.
 The setting was intentionally simple and physical, as no interface and no screens were used. It was only mediated communication through the researcher, myself. Each session lasted around an hour.
 Observations
 At first, the interactions were playful. Participants teased each other, delayed responses, or jokingly refused permission. The situation felt like a game of minor power. Some laughed and tried to “test the system” by keeping the door closed for long stretches. As time passed, amusement gave way to fatigue. Those waiting outside described the experience as “annoying,” “pointless,” or “a waste of time.” Inside, participants admitted to feeling “guilty” or “bored” by the responsibility of deciding who could enter.
@@ -394,7 +397,7 @@ Interpretation
 The shared-access model revealed that mutual consent often collapses under the weight of coordination and social discomfort. Participants valued clear rules and impersonal judgment in digital systems precisely because they prevent such awkward dependencies.
 Where Experiment 1 exposed confusion through over-structured rules, this test exposed exhaustion through social mediation. Human-based verification made access feel arbitrary and personal rather than procedural. Trust, when made too visible, became an irritating  game of negotiation.
 The outcome suggests that the absence of human judgment in everyday login design is practical and  protective. People prefer systems that remove interpersonal gatekeeping, even at the cost of abstraction.
-Experiment 3 — The Customised Step Login
+Experiment 3 - The Customised Step Login
 IMAGES IMAGES
 Objective and Premise
 This prototype examined whether giving users control over their own verification logic could foster a more tangible sense of ownership. Instead of following fixed procedures, participants defined what would count as proof of identity within a 30-second window after signing in.
@@ -417,11 +420,18 @@ Interpretation
 Letting users define their own confirmation logic inverted the usual relationship between user and system.  Since the user authored their verification method, the platform no longer dictated proof. Yet this autonomy introduced fragility. Several noted they “wouldn’t want this on an important site,” fearing they might forget their chosen action, which makes sense regarding proportionality.
 Practically, this experiment underscores the limits of self-determination: while people appreciate flexibility, they also rely on stable external frameworks to sustain continuity across sessions.
 
-
 Key Insights for Design
 Across field studies, interviews, and experiments, several principles emerged for what makes authentication genuinely effective. A good login balances friction with comprehension: it asks for effort that feels necessary. It is predictable without being rigid, and demands that it remains secure while not being too punitive or asking for private  personal data. Users trust systems that communicate intent clearly. Recovery needs to also be device-centric. Material exclusion or dependency should be avoided, which is problematic for Passkeys and other Authentication methods. Recovery needs to perhaps ask for other possibilities, instead of private home data or giving a set of permanent codes to not lose. 
 In practice, this means designing authentication that fits its context (visually and systemically) integrating with familiar gestures, and making verification an understandable part of interaction rather than an interruption.
 Play could be injected into the login process, as well. It could be enriching to add quizzes, or other practices and forms of entertainment into authentication, allowing it to be less alienating, depending on the context.
+From these findings emerges a framework for human-centred authentication design:
+Login should correspond to the sensitivity and purpose of the platform; not all systems require identical proofs or procedures. (Contextual)
+Effort must align with risk. When friction is interpretable and situated, it enhances rather than disrupts trust. (Proportional)
+Clear feedback, guidance, and empathetic tone foster confidence and reduce circumvention; users who feel cared for are more vigilant.(Transparency)
+Confirming legitimate control need not demand personal disclosure. Separating ownership from real physical identity preserves privacy while maintaining accountability. (User-owned relation instead of Identifying-platform)
+Game-like interactions can teach how authentication works, turning entry into a shared and learnable practice. (Play and interaction can enhance tech literacy)
+
+Speculative Logins
 CONTEXT
 This graph shows what users deem high friction login methods (as in, complicated methods), and what contexts require hard login methods for safety purposes.
 
@@ -430,10 +440,6 @@ This graph shows what users deem high friction login methods (as in, complicated
 METHOD
 CONTEXT
 HIGH FRICTION
-
-
-
-
 Authentication App
 2FA code (text or app),
 Access App
@@ -465,36 +471,46 @@ Gaming login
 LOW FRICTION
 Security question
 
-“Login with Google / Apple / Facebook”
+Login with Google / Apple / Facebook
 Community-run wiki or archive
 Anonymous feedback form
 Anonymous platform
-Online magazine comment sectio
+Online magazine comment section
 
 
 This graph outlines how users perceive login friction across different contexts. High-friction methods such as authentication apps, 2FA codes, and physical tokens are accepted for banking, healthcare, and other high-risk platforms. 
 Medium friction, like magic links or SMS codes, fits semi-private spaces such as social media or personal storage. Standard passwords or QR scans suit casual or creative platforms, while low-friction logins (like “Sign in with Google” or simple security questions) are preferred for low-stakes, anonymous, or community spaces. The data shows that users link the level of friction to the perceived sensitivity of the context, and not to convenience alone.
+Design proposals
 
-DESIGN PROPOSALS
+This chapter translates the principles developed throughout this research into three concrete design proposals. Each targets a specific pain point in the contemporary login experience, aiming to offer a speculative yet practical path toward more engaging and effective digital security.
+Password Security Quest 
+To combat the overwhelming tasks of security maintenance, this proposal redesigns the password manager interface for breached credentials. It breaks down the monolithic task of updating "100+ compromised passwords" into a series of managed, daily "quests" (e.g., "Update your 3 most critical accounts"). This playful and proportional approach reduces cognitive load, and attempts to foster a sense of ownership and accomplishment. The system would provide guided, one-click access to password change pages, storing new credentials only upon user action,
 
-(insert 2-3 design proposals or new applications that could help login experiences)
-(this section still needs to be written up and finished this week at LEAST)
+Post-Login Vigilance Confirmation
+This is an extension of one of the previous experiments.This proposal introduces a native, post-password confirmation method, to replace or supplement externalised two-factor methods. Upon correct password entry, the user must perform a simple, contextual action within the platform (e.g., clicking a specific UI element, trace a pattern, click on parts of the page) within a 1 minute window. This creates a proportional and contextual method that confirms user presence against automated attacks and phishing, all while keeping the verification process internal to the platform. Success is measured through completion rates, time-on-task, and perceived clarity. 
+Accessible Authenticator
+A redesign of the standard authenticator app to reduce affective friction and improve accessibility. It employs a dual approach: color-by-Position coding for one-time passwords to aid users with dyslexia or visual stress, and  an optional Skeuomorphic Rotary Dial for number entry, providing a tactile, sequential input method that may reduce errors and enhance the perceived security through more deliberate interaction.
+Proportional design 
+This proposal confronts the aesthetic alienation of standardized login pop-ups (e.g., "Sign in with Google") by advocating for login interfaces that are thematically integrated with their host platform. A children's educational site should not have the same design language as and login methods as a bank, for example. This contextual design refuses a generic checkpoint in benefit of a login page that reinforces the platform's identity. Extending this, platforms could offer user-customizable themes or community-generated "skins," in an attempt to preserve a sense of ownership and belonging even before authentication is complete. 
+Integration
+These features are conceived as configurable options, with fallbacks to standard flows to ensure universal access. 
+
+
+
+
+
+
 
 
 Conclusion
 This thesis has examined login as a defining gesture of digital life, an interface where access, trust, and identity are continuously negotiated. Through historical, theoretical, and experimental inquiry, it has shown that authentication is not a neutral checkpoint but a cultural practice shaped by long genealogies of measurement, control, and recognition. From Bertillon’s anthropometry to biometric scans and single sign-on infrastructures, the same ambition persists: to secure entry by rendering identity verifiable. Through authentication, an attempt is made at making identity quantifiable.
 By situating login within this lineage, the study revealed how the externalisation of authentication (the delegation of trust to corporate identity providers and automated systems) has distanced users from the very infrastructures meant to protect them. The design of security has become abstract, invisible, and emotionally detached. Yet this condition is not irreversible: principles of play, contextuality, and literacy-oriented design can strengthen, rather than weaken, security.
 Through speculative and game-based prototypes, the research tested what happens when authentication becomes participatory. These experiments reframed login as a form of interaction in which users act as co-agents rather than passive subjects. In several cases (most notably those inspired by DuoPass) participants performed better when verification drew on familiar, user-defined, meaningful cues. When friction was contextualised and emotionally legible, it improved both recall and engagement. The presence of play and relational feedback fostered attentiveness rather than complacency, producing a form of applied security grounded in understanding and transparency.
-From these findings emerges a framework for human-centred authentication design:
-Login should correspond to the sensitivity and purpose of the platform; not all systems require identical proofs or procedures. (Contextual)
-Effort must align with risk. When friction is interpretable and situated, it enhances rather than disrupts trust. (Proportional)
-Clear feedback, guidance, and empathetic tone foster confidence and reduce circumvention; users who feel cared for are more vigilant.(Transparency)
-Confirming legitimate control need not demand personal disclosure. Separating ownership from real physical identity preserves privacy while maintaining accountability. (User-owned relation instead of Identifying-platform)
-Game-like interactions can teach how authentication works, turning entry into a shared and learnable practice. (Play and interaction can enhance tech literacy)
-
 This framework reframes authentication a dynamic threshold where the basis of design can be rebuilt, through systems in which protection and participation coexist. Carefully designing with play and contextual literacy does not indeed trivialise security; it deepens it by aligning technological rigour with human comprehension.
 Ultimately, the future of authentication lies in reconciling security with user experience. By combining contextual awareness, proportional effort, and relational design, authentication can become both safer and more humane. 
 The challenge for future designers is not to remove friction, but to make it meaningful: to build systems that protect through understanding and secure through participation.
+
+
 
 
 
@@ -574,8 +590,10 @@ GALLOWAY, Alexander R., 2012. The Interface Effect. Cambridge, UK ; Malden, MA :
 CHUN, Wendy Hui Kyong, 2011. Programmed visions: software and memory. Cambridge, Mass : MIT Press, pp. 59, Software studies. ISBN 978-0-262-01542-4.
 
 CHUN, Wendy Hui Kyong, 2011. Programmed visions: software and memory. Cambridge, Mass : MIT Press, pp. 5, Software studies. ISBN 978-0-262-01542-4.
+COLE, Simon A. Suspect Identities: A History of Fingerprinting and Criminal Identification. Cambridge, MA : Harvard University Press, 2001.
+BROCA, Paul. Instructions craniologiques et craniométriques. Paris : C. Reinwald, 1875.
+BONNEAU, Joseph; HERLEY, Cormac; VAN OORSCHOT, Paul C.; STAJANO, Frank. The quest to replace passwords: A framework for comparative evaluation of web authentication schemes. In: 2012 IEEE Symposium on Security and Privacy. 2012.
 
+WARE, Colin. Information visualization: perception for design. 3rd ed. Burlington, MA: Morgan Kaufmann, 2013.
 
-
-
-
+GAW, Shiri; FELTEN, Edward W. Password management strategies. In: Proceedings of the 2006 Workshop on Human-Computer Interaction Security and Privacy. 2006.

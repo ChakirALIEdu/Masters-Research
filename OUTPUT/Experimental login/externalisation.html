@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Externalisation of Login - Vertical Timeline</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .timeline-container {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid #000;
+        }
+
+        .timeline-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #000;
+        }
+
+        .timeline-vertical {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 80px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #000 0%, #666 50%, #999 100%);
+            z-index: 1;
+        }
+
+        .timeline-stage {
+            position: relative;
+            margin-bottom: 80px;
+            padding-left: 140px;
+            z-index: 2;
+        }
+
+        .timeline-stage:last-child {
+            margin-bottom: 0;
+        }
+
+        .stage-node {
+            position: absolute;
+            left: -60px;
+            top: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            border: 4px solid white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            z-index: 3;
+        }
+
+        .stage-1 { background: #000; }
+        .stage-2 { background: #666; }
+        .stage-3 { background: #999; }
+
+        .stage-period {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .stage-title {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        .stage-description {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .stage-characteristics {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Authentication Flow Section */
+        .flow-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px dashed #ccc;
+        }
+
+        .flow-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        .vertical-flow {
+            position: relative;
+            padding: 20px;
+        }
+
+        .flow-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #ccc;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .flow-step {
+            position: relative;
+            margin-bottom: 50px;
+            z-index: 2;
+        }
+
+        .flow-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-box {
+            background: white;
+            border: 3px solid #000;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .step-title {
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .step-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .step-item {
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #333;
+            position: relative;
+        }
+
+        .step-item::before {
+            content: "→";
+            position: absolute;
+            left: -20px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .flow-arrow {
+            position: absolute;
+            left: 50%;
+            bottom: -25px;
+            transform: translateX(-50%);
+            background: #666;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 3;
+        }
+
+        .arrow-1::after { content: "delegates to"; }
+        .arrow-2::after { content: "validates via"; }
+        .arrow-3::after { content: "grants"; }
+    </style>
+</head>
+<body>
+    <div class="timeline-container">
+        <h2 class="timeline-title">The Externalisation of Login</h2>
+        
+        <div class="timeline-vertical">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-stage">
+                <div class="stage-node stage-1">🔑</div>
+                <div class="stage-period">1990s-2000s</div>
+                <div class="stage-title">Direct</div>
+                <div class="stage-description">
+                    User creates password directly with platform. Simplistic and contained, but vulnerable to breaches and poor security hygiene.
+                </div>
+                <div class="stage-characteristics">
+                    Simple relationship between user and platform
+                </div>
+            </div>
+            
+            <div class="timeline-stage">
+                <div class="stage-node stage-2">📱</div>
+                <div class="stage-period">2005-2015</div>
+                <div class="stage-title">Mediated</div>
+                <div class="stage-description">
+                    Additional verification through SMS, email, or authenticator apps. Redundancy improves security but introduces device dependencies.
+                </div>
+                <div class="stage-characteristics">
+                    Security through multiple verification channels
+                </div>
+            </div>
+            
+            <div class="timeline-stage">
+                <div class="stage-node stage-3">🌐</div>
+                <div class="stage-period">2015-Present</div>
+                <div class="stage-title">Distributed</div>
+                <div class="stage-description">
+                    SSO, passkeys, biometrics. The authentication process has been delegated to external infrastructures, creating dependencies.
+                </div>
+                <div class="stage-characteristics">
+                    Identity management outsourced to third parties
+                </div>
+            </div>
+        </div>
+
+        <!-- Contemporary Authentication Flow -->
+        <div class="flow-section">
+            <div class="flow-title">Contemporary Authentication Journey</div>
+            
+            <div class="vertical-flow">
+                <div class="flow-line"></div>
+                
+                <div class="flow-step">
+                    <div class="step-box">
+                        <div class="step-number">1</div>
+                        <div class="step-title">User Intent</div>
+                        <div class="step-items">
+                            <div class="step-item">Wants access</div>
+                            <div class="step-item">Remembers credentials</div>
+                            <div class="step-item">Expects entry</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow arrow-1"></div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-box">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Platform Redirect</div>
+                        <div class="step-items">
+                            <div class="step-item">"Verify your phone"</div>
+                            <div class="step-item">"Login with Google"</div>
+                            <div class="step-item">Delegates responsibility</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow arrow-2"></div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-box">
+                        <div class="step-number">3</div>
+                        <div class="step-title">External Validation</div>
+                        <div class="step-items">
+                            <div class="step-item">SMS providers</div>
+                            <div class="step-item">Tech giants (Google/Apple)</div>
+                            <div class="step-item">Biometric systems</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow arrow-3"></div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-box">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Conditional Access</div>
+                        <div class="step-items">
+                            <div class="step-item">Accepts external proof</div>
+                            <div class="step-item">Limited control</div>
+                            <div class="step-item">Borrowed interface</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

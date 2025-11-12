@@ -1,0 +1,32 @@
+{
+  "experiment": {
+    "name": "Auth Experiment",
+    "description": "This experiment tests different login methods, including pattern tracing.",
+    "loginMethods": [
+      {
+        "method": "patternTracing",
+        "description": "Users will trace a pattern with their mouse to log in."
+      },
+      {
+        "method": "traditionalLogin",
+        "description": "Users can log in using a username and password."
+      }
+    ],
+    "vigilanceMode": {
+      "enabled": true,
+      "message": "VIGILANCE MODE ACTIVATED. Please trace the pattern to proceed."
+    },
+    "patternTemplates": [
+      {
+        "id": "template1",
+        "pattern": "LZLZLZ",
+        "description": "A simple zigzag pattern."
+      },
+      {
+        "id": "template2",
+        "pattern": "XOXOXO",
+        "description": "An alternating cross pattern."
+      }
+    ]
+  }
+}

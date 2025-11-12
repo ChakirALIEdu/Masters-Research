@@ -1,0 +1,7 @@
+“I argue that login is not just a technical entry point, but a ritual that encodes distrust and asymmetry.”
+
+I concur. I think that in terms of login experiences, we've lost the plot. Logins should be seamless indeed but in our race for security in this data age, we've created more and more alienating experiences that makes the onboarding bleed into clumsy, convoluted messes and paranoia at worst. But others state a hands-off attitude, that they see 2FA as an easy thing, a prowess in design and easy life. Yet the people that tell me that, like the guy in the military, were the ones typically not too hung up on security, leaving smart cards, phones, and other things unattended, not locking doors, and all in all being a danger when it comes to security, due to their lax attitude. Notice? The insurance that security is guaranteed allowed for sloppier handling of it, jeopardising the integrity of institutions. Also, in terms of smart cards, I worked at an infirmary, and we had one smart card given by a group outside of the infirmary. If the cards stopped, we could not work and save lives. However, the IT department had full access to the infirmary. Should they want to have access to morphine or what have you, they could have done so easily. Do you understand? In trying to insure security, it was greatly jeopardized and de-centralized.
+
+All of those things give us the illusion of safety, and the sentiment of seamless access, making us forget that it was granted.
+
+Notice how we don't say "access granted", but "welcome" and "you can enter!"...

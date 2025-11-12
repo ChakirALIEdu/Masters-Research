@@ -1,0 +1,68 @@
+:root {
+    --bg: rgba(255, 255, 255, 0.95);
+    --overlay-bg: rgba(0, 0, 0, 0.7);
+    --text-color: #333;
+    --warning-color: #ffb74d;
+    --danger-color: #e57373;
+}
+
+.vigilance-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--overlay-bg);
+    z-index: 1000;
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+.vigilance-message {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.vigilance-message h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.vigilance-message p {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.vigilance-message .pattern-instruction {
+    font-weight: bold;
+    color: var(--warning-color);
+}
+
+.vigilance-message .warning {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+.vigilance-message .pattern-canvas {
+    border: 2px dashed var(--warning-color);
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    background: #f9f9f9;
+}
+
+.vigilance-message .pattern-canvas::after {
+    content: "Trace the pattern here";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--warning-color);
+    font-size: 18px;
+    pointer-events: none;
+}
